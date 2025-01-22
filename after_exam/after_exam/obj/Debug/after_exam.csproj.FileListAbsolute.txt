@@ -1,0 +1,7 @@
+C:\Users\User\Desktop\01\after_exam\after_exam\bin\Debug\after_exam.exe.config
+C:\Users\User\Desktop\01\after_exam\after_exam\bin\Debug\after_exam.exe
+C:\Users\User\Desktop\01\after_exam\after_exam\bin\Debug\after_exam.pdb
+C:\Users\User\Desktop\01\after_exam\after_exam\obj\Debug\after_exam.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\01\after_exam\after_exam\obj\Debug\after_exam.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\01\after_exam\after_exam\obj\Debug\after_exam.exe
+C:\Users\User\Desktop\01\after_exam\after_exam\obj\Debug\after_exam.pdb

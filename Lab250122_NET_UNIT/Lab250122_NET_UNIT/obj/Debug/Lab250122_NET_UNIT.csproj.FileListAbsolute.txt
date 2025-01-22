@@ -1,0 +1,12 @@
+C:\Users\User\Desktop\01\Lab250122_NET_UNIT\Lab250122_NET_UNIT\bin\Debug\Lab250122_NET_UNIT.exe.config
+C:\Users\User\Desktop\01\Lab250122_NET_UNIT\Lab250122_NET_UNIT\bin\Debug\Lab250122_NET_UNIT.exe
+C:\Users\User\Desktop\01\Lab250122_NET_UNIT\Lab250122_NET_UNIT\bin\Debug\Lab250122_NET_UNIT.pdb
+C:\Users\User\Desktop\01\Lab250122_NET_UNIT\Lab250122_NET_UNIT\obj\Debug\Lab250122_NET_UNIT.csproj.AssemblyReference.cache
+C:\Users\User\Desktop\01\Lab250122_NET_UNIT\Lab250122_NET_UNIT\obj\Debug\Lab250122_NET_UNIT.Form1.resources
+C:\Users\User\Desktop\01\Lab250122_NET_UNIT\Lab250122_NET_UNIT\obj\Debug\Lab250122_NET_UNIT.Properties.Resources.resources
+C:\Users\User\Desktop\01\Lab250122_NET_UNIT\Lab250122_NET_UNIT\obj\Debug\Lab250122_NET_UNIT.csproj.GenerateResource.cache
+C:\Users\User\Desktop\01\Lab250122_NET_UNIT\Lab250122_NET_UNIT\obj\Debug\Lab250122_NET_UNIT.csproj.CoreCompileInputs.cache
+C:\Users\User\Desktop\01\Lab250122_NET_UNIT\Lab250122_NET_UNIT\obj\Debug\Lab250122_NET_UNIT.exe
+C:\Users\User\Desktop\01\Lab250122_NET_UNIT\Lab250122_NET_UNIT\obj\Debug\Lab250122_NET_UNIT.pdb
+C:\Users\User\Desktop\01\Lab250122_NET_UNIT\Lab250122_NET_UNIT\obj\Debug\Lab250122_NET_UNIT.Form2_openfile.resources
+C:\Users\User\Desktop\01\Lab250122_NET_UNIT\Lab250122_NET_UNIT\obj\Debug\Lab250122_NET_UNIT.Form3_calculator.resources

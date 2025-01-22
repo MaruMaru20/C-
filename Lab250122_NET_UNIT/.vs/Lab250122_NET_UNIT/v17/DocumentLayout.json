@@ -1,0 +1,57 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\01\\Lab250122_NET_UNIT\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{07609A2B-D6DA-4A58-B371-8B7B085252EA}|Lab250122_NET_UNIT\\Lab250122_NET_UNIT.csproj|c:\\users\\user\\desktop\\01\\lab250122_net_unit\\lab250122_net_unit\\form3_calculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{07609A2B-D6DA-4A58-B371-8B7B085252EA}|Lab250122_NET_UNIT\\Lab250122_NET_UNIT.csproj|solutionrelative:lab250122_net_unit\\form3_calculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07609A2B-D6DA-4A58-B371-8B7B085252EA}|Lab250122_NET_UNIT\\Lab250122_NET_UNIT.csproj|c:\\users\\user\\desktop\\01\\lab250122_net_unit\\lab250122_net_unit\\form3_calculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07609A2B-D6DA-4A58-B371-8B7B085252EA}|Lab250122_NET_UNIT\\Lab250122_NET_UNIT.csproj|solutionrelative:lab250122_net_unit\\form3_calculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form3_calculator.cs [\u8A2D\u8A08]",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\01\\Lab250122_NET_UNIT\\Lab250122_NET_UNIT\\Form3_calculator.cs",
+              "RelativeDocumentMoniker": "Lab250122_NET_UNIT\\Form3_calculator.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\01\\Lab250122_NET_UNIT\\Lab250122_NET_UNIT\\Form3_calculator.cs [\u8A2D\u8A08]",
+              "RelativeToolTip": "Lab250122_NET_UNIT\\Form3_calculator.cs [\u8A2D\u8A08]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-22T07:37:15.965Z",
+              "EditorCaption": " [\u8A2D\u8A08]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form3_calculator.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\01\\Lab250122_NET_UNIT\\Lab250122_NET_UNIT\\Form3_calculator.cs",
+              "RelativeDocumentMoniker": "Lab250122_NET_UNIT\\Form3_calculator.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\01\\Lab250122_NET_UNIT\\Lab250122_NET_UNIT\\Form3_calculator.cs",
+              "RelativeToolTip": "Lab250122_NET_UNIT\\Form3_calculator.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAMwBcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-22T08:10:04.583Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\01\\after_exam\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{383066BA-C1B6-4261-99AD-8CAD245919DC}|after_exam\\after_exam.csproj|c:\\users\\user\\desktop\\01\\after_exam\\after_exam\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{383066BA-C1B6-4261-99AD-8CAD245919DC}|after_exam\\after_exam.csproj|solutionrelative:after_exam\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{383066BA-C1B6-4261-99AD-8CAD245919DC}|after_exam\\after_exam.csproj|c:\\users\\user\\desktop\\01\\after_exam\\after_exam\\demo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{383066BA-C1B6-4261-99AD-8CAD245919DC}|after_exam\\after_exam.csproj|solutionrelative:after_exam\\demo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\01\\after_exam\\after_exam\\Program.cs",
+              "RelativeDocumentMoniker": "after_exam\\Program.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\01\\after_exam\\after_exam\\Program.cs",
+              "RelativeToolTip": "after_exam\\Program.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAADQAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-22T01:13:42.949Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Demo.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\01\\after_exam\\after_exam\\Demo.cs",
+              "RelativeDocumentMoniker": "after_exam\\Demo.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\01\\after_exam\\after_exam\\Demo.cs",
+              "RelativeToolTip": "after_exam\\Demo.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAzwCoAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-22T01:16:11.208Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
