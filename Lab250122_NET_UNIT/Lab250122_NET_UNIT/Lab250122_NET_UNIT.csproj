@@ -46,6 +46,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cool.cs" />
+    <Compile Include="DB.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -64,6 +66,37 @@
     <Compile Include="Form3_calculator.Designer.cs">
       <DependentUpon>Form3_calculator.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form4_renamefile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form4_renamefile.Designer.cs">
+      <DependentUpon>Form4_renamefile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form5_ClassLibrary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form5_ClassLibrary.Designer.cs">
+      <DependentUpon>Form5_ClassLibrary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form6_DB_review.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form6_DB_review.Designer.cs">
+      <DependentUpon>Form6_DB_review.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form7_select_custumer_orderby.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form7_select_custumer_orderby.Designer.cs">
+      <DependentUpon>Form7_select_custumer_orderby.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form8_product_Category.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form8_product_Category.Designer.cs">
+      <DependentUpon>Form8_product_Category.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MSIT62.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -74,6 +107,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form3_calculator.resx">
       <DependentUpon>Form3_calculator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form4_renamefile.resx">
+      <DependentUpon>Form4_renamefile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form6_DB_review.resx">
+      <DependentUpon>Form6_DB_review.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form7_select_custumer_orderby.resx">
+      <DependentUpon>Form7_select_custumer_orderby.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form8_product_Category.resx">
+      <DependentUpon>Form8_product_Category.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

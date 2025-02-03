@@ -1,14 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\01\\Lab250122_NET_UNIT\\",
+  "WorkspaceRootPath": "D:\\C#\\C#\\Lab250122_NET_UNIT\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{07609A2B-D6DA-4A58-B371-8B7B085252EA}|Lab250122_NET_UNIT\\Lab250122_NET_UNIT.csproj|c:\\users\\user\\desktop\\01\\lab250122_net_unit\\lab250122_net_unit\\form3_calculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{07609A2B-D6DA-4A58-B371-8B7B085252EA}|Lab250122_NET_UNIT\\Lab250122_NET_UNIT.csproj|solutionrelative:lab250122_net_unit\\form3_calculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{07609A2B-D6DA-4A58-B371-8B7B085252EA}|Lab250122_NET_UNIT\\Lab250122_NET_UNIT.csproj|D:\\C#\\C#\\Lab250122_NET_UNIT\\lab250122_net_unit\\form8_product_category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{07609A2B-D6DA-4A58-B371-8B7B085252EA}|Lab250122_NET_UNIT\\Lab250122_NET_UNIT.csproj|solutionrelative:lab250122_net_unit\\form8_product_category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{07609A2B-D6DA-4A58-B371-8B7B085252EA}|Lab250122_NET_UNIT\\Lab250122_NET_UNIT.csproj|c:\\users\\user\\desktop\\01\\lab250122_net_unit\\lab250122_net_unit\\form3_calculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{07609A2B-D6DA-4A58-B371-8B7B085252EA}|Lab250122_NET_UNIT\\Lab250122_NET_UNIT.csproj|solutionrelative:lab250122_net_unit\\form3_calculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{07609A2B-D6DA-4A58-B371-8B7B085252EA}|Lab250122_NET_UNIT\\Lab250122_NET_UNIT.csproj|D:\\C#\\C#\\Lab250122_NET_UNIT\\lab250122_net_unit\\form8_product_category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07609A2B-D6DA-4A58-B371-8B7B085252EA}|Lab250122_NET_UNIT\\Lab250122_NET_UNIT.csproj|solutionrelative:lab250122_net_unit\\form8_product_category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07609A2B-D6DA-4A58-B371-8B7B085252EA}|Lab250122_NET_UNIT\\Lab250122_NET_UNIT.csproj|d:\\c#\\c#\\lab250122_net_unit\\lab250122_net_unit\\db.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07609A2B-D6DA-4A58-B371-8B7B085252EA}|Lab250122_NET_UNIT\\Lab250122_NET_UNIT.csproj|solutionrelative:lab250122_net_unit\\db.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,36 +22,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Form3_calculator.cs [\u8A2D\u8A08]",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\01\\Lab250122_NET_UNIT\\Lab250122_NET_UNIT\\Form3_calculator.cs",
-              "RelativeDocumentMoniker": "Lab250122_NET_UNIT\\Form3_calculator.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\01\\Lab250122_NET_UNIT\\Lab250122_NET_UNIT\\Form3_calculator.cs [\u8A2D\u8A08]*",
-              "RelativeToolTip": "Lab250122_NET_UNIT\\Form3_calculator.cs [\u8A2D\u8A08]*",
+              "DocumentIndex": 2,
+              "Title": "DB.cs",
+              "DocumentMoniker": "D:\\C#\\C#\\Lab250122_NET_UNIT\\Lab250122_NET_UNIT\\DB.cs",
+              "RelativeDocumentMoniker": "Lab250122_NET_UNIT\\DB.cs",
+              "ToolTip": "D:\\C#\\C#\\Lab250122_NET_UNIT\\Lab250122_NET_UNIT\\DB.cs*",
+              "RelativeToolTip": "Lab250122_NET_UNIT\\DB.cs*",
+              "ViewState": "AgIAAEMAAAAAAAAAAAAwwE0AAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-22T07:37:15.965Z",
-              "EditorCaption": " [\u8A2D\u8A08]"
+              "WhenOpened": "2025-02-03T07:21:01.358Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Form3_calculator.cs",
-              "DocumentMoniker": "C:\\Users\\User\\Desktop\\01\\Lab250122_NET_UNIT\\Lab250122_NET_UNIT\\Form3_calculator.cs",
-              "RelativeDocumentMoniker": "Lab250122_NET_UNIT\\Form3_calculator.cs",
-              "ToolTip": "C:\\Users\\User\\Desktop\\01\\Lab250122_NET_UNIT\\Lab250122_NET_UNIT\\Form3_calculator.cs*",
-              "RelativeToolTip": "Lab250122_NET_UNIT\\Form3_calculator.cs*",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAMwBcAAAAAAAAAAAAAAA==",
+              "Title": "Form8_product_Category.cs",
+              "DocumentMoniker": "D:\\C#\\C#\\Lab250122_NET_UNIT\\Lab250122_NET_UNIT\\Form8_product_Category.cs",
+              "RelativeDocumentMoniker": "Lab250122_NET_UNIT\\Form8_product_Category.cs",
+              "ToolTip": "D:\\C#\\C#\\Lab250122_NET_UNIT\\Lab250122_NET_UNIT\\Form8_product_Category.cs*",
+              "RelativeToolTip": "Lab250122_NET_UNIT\\Form8_product_Category.cs*",
+              "ViewState": "AgIAACEAAAAAAAAAAAAIwC8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-22T08:10:04.583Z",
+              "WhenOpened": "2025-02-03T07:12:01.093Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form8_product_Category.cs [\u8A2D\u8A08]",
+              "DocumentMoniker": "D:\\C#\\C#\\Lab250122_NET_UNIT\\Lab250122_NET_UNIT\\Form8_product_Category.cs",
+              "RelativeDocumentMoniker": "Lab250122_NET_UNIT\\Form8_product_Category.cs",
+              "ToolTip": "D:\\C#\\C#\\Lab250122_NET_UNIT\\Lab250122_NET_UNIT\\Form8_product_Category.cs [\u8A2D\u8A08]*",
+              "RelativeToolTip": "Lab250122_NET_UNIT\\Form8_product_Category.cs [\u8A2D\u8A08]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-03T07:05:19.657Z",
+              "EditorCaption": " [\u8A2D\u8A08]"
             }
           ]
         }

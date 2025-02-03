@@ -16,7 +16,7 @@ namespace Lab250122_NET_UNIT
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form3_calculator());
+            Application.Run(new Form8_product_Category());
         }
     }
 }

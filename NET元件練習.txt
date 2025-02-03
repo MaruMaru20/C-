@@ -1,0 +1,162 @@
+
+███████  2025/01/23  14:50  ~ 討論 const 和 readonly 關鍵字
+
+10. 建立新增專案，專案類型選擇  類別庫(.NET Framework)
+    專案名稱預設為 ClassLibrary1
+    稍後為了方便識別，請改為 MyClassLibrary
+    其餘依照預設值即可
+
+    * 檔案位置預設為 C:\Users\你的使用者名稱\source\repos 
+    * 可以修改檔案存放位置
+
+
+11. 專案中有一個預設的 Class1.cs 類別
+    請透過方案總管將類別檔案名稱改為 MSIT62.cs
+    並在檔案中添加底下程式碼
+
+    public const string classroom = "1804";
+    public static readonly string hours = "570";
+
+
+12. 請自己新增一個類別，名稱自訂，並在類別中放入一些方法
+
+    例如: Pokemon.cs
+
+
+
+15. 在工具列上面選擇 建置 > 建置方案
+
+    建置後會產生一個dll檔案，位於  (你存放的路徑)\MyClassLibrary\bin\Debug\MyClassLibrary.dll
+
+
+20. 建立新增專案，專案類型選擇 Windows Forms App(.NET Framework)
+
+    假設你建立的專案名稱為 MyProject
+
+
+21. 加入步驟 15 所建立的類別庫 
+    
+    專案 > 右鍵 > 加入> 參考 > 點選右下角的瀏覽按鈕，然後選擇 步驟15 的dll檔案
+
+
+25. 在表單中加入 一個按鈕 和 加入兩個 label
+
+    按鈕點擊後，加入這兩行程式碼
+    label1.Text = MyClassLibrary.MSIT62.classroom;
+    label2.Text = MyClassLibrary.MSIT62.hours;
+
+
+28. 請嘗試再加入 一個按鈕，測試 剛剛 步驟12 自己定義的類別 
+
+
+
+29. 運行專案，並且點擊按鈕
+
+    (你存放的路徑)\MyProject\bin\Debug\MyProject.exe
+    (你存放的路徑)\MyProject\bin\Debug\MyClassLibrary.dll
+
+    點擊 (你存放的路徑)\MyProject\bin\Debug\MyProject.exe 會開啟表單
+
+
+30. 回到類別庫專案，修改屬性資料，然後重新建置 MyClassLibrary
+
+    public const string classroom = "1899";
+    public static readonly string hours = "370";
+
+
+31. 在上方工具列上面選擇 建置 > 建置方案
+
+    建置後會產生一個dll檔案，位於  (你存放的路徑)\MyClassLibrary\bin\Debug\MyClassLibrary.dll
+
+    
+33. 將建置後的dll檔案
+
+    (你存放的路徑)\MyClassLibrary\bin\Debug\MyClassLibrary.dll
+
+    拖放到 MyProject 資料夾進行取代
+
+    (你存放的路徑)\MyProject\bin\Debug\MyClassLibrary.dll
+
+
+35. 重新點選 Windows Forms App 專案所產生的exe檔案
+
+
+40. 觀察畫面的資訊，並說明 const 和 readonly 的差異
+
+
+
+
+
+
+
+
+
+
+███████  2025/01/23  11:10 ~ 讀取檔案，批次修改檔案名稱
+
+10. 讀取 A資料夾內的檔案，更改名字後，放到B資料夾
+    大致上需要使用到的 元件/控制項 如下，請根據自己的想法增減
+
+    Label
+    TextBox
+    Button
+    ListBox
+    TableLayoutPanel
+    FolderBrowserDialog
+
+
+
+15. 請依照自己的想法進行上述 元件/控制項 的排版
+
+    或者比照教室投影的畫面進行處理
+
+
+
+
+20. 程式處理：取得資料夾路徑
+
+    20-1 使用者透過對話視窗選取資料夾
+        FolderBrowserDialog
+        
+
+    20-2 讀出資料夾底下的所有檔案，並顯示完整路徑到 ListBox
+        Directory.GetFiles
+
+
+    20-3 該如何調整Dialog中的最上層資料夾？
+        請嘗試添加程式碼，將最上層資料夾指定到其他目錄
+
+
+
+25. 程式處理：將檔案名稱加入時間日期後，放入另一個指定的資料夾
+
+    25-1 取得所有紀錄在 ListBox 的檔案路徑
+
+
+    25-2 取得該檔案的上次存取時間
+        FileInfo
+        FileInfo.LastAccessTime
+
+
+    25-3 組成新的檔名，並解將檔案複製到新的資料夾；
+        並將新的路徑顯示到另一個 ListBox
+        FileInfo.CopyTo
+
+
+
+███████  2025/01/23  09:30 ~ 計算機(小算盤)
+
+20. 程式處理：數字按鈕
+        比照小算盤/計算機的運作方式
+        當使用者按下數字按鈕後，數字會帶入到 labelB
+
+25. 程式處理：運算符號按鈕
+    25-1 將下列資訊 存放到 labelA
+        a. labelB 顯示的資料
+        b. 使用者當前按下哪一個運算符號
+    25-2 清空 labelB
+
+28. 程式處理：計算結果
+    28-1 將數字和符號從 labelA 分解出來
+        * 使用正規表達式或其他方法進行處理
+    28-2 計算出結果顯示在畫面上

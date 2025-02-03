@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\01\\MyClassLibrary\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D8944966-31F4-45A0-94AF-A0B1381A0623}|MyClassLibrary\\MyClassLibrary.csproj|c:\\users\\user\\desktop\\01\\myclasslibrary\\myclasslibrary\\cool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8944966-31F4-45A0-94AF-A0B1381A0623}|MyClassLibrary\\MyClassLibrary.csproj|solutionrelative:myclasslibrary\\cool.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D8944966-31F4-45A0-94AF-A0B1381A0623}|MyClassLibrary\\MyClassLibrary.csproj|C:\\Users\\User\\Desktop\\01\\MyClassLibrary\\myclasslibrary\\msit62.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D8944966-31F4-45A0-94AF-A0B1381A0623}|MyClassLibrary\\MyClassLibrary.csproj|solutionrelative:myclasslibrary\\msit62.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MSIT62.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\01\\MyClassLibrary\\MyClassLibrary\\MSIT62.cs",
+              "RelativeDocumentMoniker": "MyClassLibrary\\MSIT62.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\01\\MyClassLibrary\\MyClassLibrary\\MSIT62.cs",
+              "RelativeToolTip": "MyClassLibrary\\MSIT62.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-23T07:12:15.773Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Cool.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\01\\MyClassLibrary\\MyClassLibrary\\Cool.cs",
+              "RelativeDocumentMoniker": "MyClassLibrary\\Cool.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\01\\MyClassLibrary\\MyClassLibrary\\Cool.cs",
+              "RelativeToolTip": "MyClassLibrary\\Cool.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-23T07:13:06.2Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -71,9 +71,6 @@ namespace Lab250122_NET_UNIT
                     //Encoding enc = Encoding.GetEncoding("utf-8");
                     richTextBox1.Text = System.IO.File.ReadAllText(theFile);
                     textBox2.Text = openFileDialog1.FileName;
-                    
-
-
 
                 }
             }
