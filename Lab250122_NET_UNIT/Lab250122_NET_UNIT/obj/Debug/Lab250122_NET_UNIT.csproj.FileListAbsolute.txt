@@ -40,3 +40,4 @@ D:\C#\C#\Lab250122_NET_UNIT\Lab250122_NET_UNIT\obj\Debug\Lab250122_NET_UNIT.exe
 D:\C#\C#\Lab250122_NET_UNIT\Lab250122_NET_UNIT\obj\Debug\Lab250122_NET_UNIT.pdb
 D:\C#\C#\Lab250122_NET_UNIT\Lab250122_NET_UNIT\obj\Debug\Lab250122_NET_UNIT.Form7_select_custumer_orderby.resources
 D:\C#\C#\Lab250122_NET_UNIT\Lab250122_NET_UNIT\obj\Debug\Lab250122_NET_UNIT.Form8_product_Category.resources
+D:\C#\C#\Lab250122_NET_UNIT\Lab250122_NET_UNIT\obj\Debug\Lab250122_NET_UNIT.Form9_prt_viewsheet.resources

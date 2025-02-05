@@ -3,16 +3,30 @@
   "WorkspaceRootPath": "D:\\C#\\C#\\Lab250122_NET_UNIT\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{07609A2B-D6DA-4A58-B371-8B7B085252EA}|Lab250122_NET_UNIT\\Lab250122_NET_UNIT.csproj|D:\\C#\\C#\\Lab250122_NET_UNIT\\lab250122_net_unit\\form8_product_category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{07609A2B-D6DA-4A58-B371-8B7B085252EA}|Lab250122_NET_UNIT\\Lab250122_NET_UNIT.csproj|solutionrelative:lab250122_net_unit\\form8_product_category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{07609A2B-D6DA-4A58-B371-8B7B085252EA}|Lab250122_NET_UNIT\\Lab250122_NET_UNIT.csproj|D:\\C#\\C#\\Lab250122_NET_UNIT\\lab250122_net_unit\\form9_prt_viewsheet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07609A2B-D6DA-4A58-B371-8B7B085252EA}|Lab250122_NET_UNIT\\Lab250122_NET_UNIT.csproj|solutionrelative:lab250122_net_unit\\form9_prt_viewsheet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{07609A2B-D6DA-4A58-B371-8B7B085252EA}|Lab250122_NET_UNIT\\Lab250122_NET_UNIT.csproj|D:\\C#\\C#\\Lab250122_NET_UNIT\\lab250122_net_unit\\form8_product_category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{07609A2B-D6DA-4A58-B371-8B7B085252EA}|Lab250122_NET_UNIT\\Lab250122_NET_UNIT.csproj|solutionrelative:lab250122_net_unit\\form8_product_category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{07609A2B-D6DA-4A58-B371-8B7B085252EA}|Lab250122_NET_UNIT\\Lab250122_NET_UNIT.csproj|D:\\C#\\C#\\Lab250122_NET_UNIT\\lab250122_net_unit\\form9_prt_viewsheet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{07609A2B-D6DA-4A58-B371-8B7B085252EA}|Lab250122_NET_UNIT\\Lab250122_NET_UNIT.csproj|solutionrelative:lab250122_net_unit\\form9_prt_viewsheet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{07609A2B-D6DA-4A58-B371-8B7B085252EA}|Lab250122_NET_UNIT\\Lab250122_NET_UNIT.csproj|d:\\c#\\c#\\lab250122_net_unit\\lab250122_net_unit\\db.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{07609A2B-D6DA-4A58-B371-8B7B085252EA}|Lab250122_NET_UNIT\\Lab250122_NET_UNIT.csproj|D:\\C#\\C#\\Lab250122_NET_UNIT\\lab250122_net_unit\\form9_prt_viewsheet.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07609A2B-D6DA-4A58-B371-8B7B085252EA}|Lab250122_NET_UNIT\\Lab250122_NET_UNIT.csproj|solutionrelative:lab250122_net_unit\\form9_prt_viewsheet.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Silence\\Desktop\\Lab_80_\u4E09\u9805\u7DF4\u7FD2_C\\Lab_80_\u4E09\u9805\u7DF4\u7FD2_C_\u7DF4\u7FD2\u8AAA\u660E\\Form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07609A2B-D6DA-4A58-B371-8B7B085252EA}|Lab250122_NET_UNIT\\Lab250122_NET_UNIT.csproj|D:\\C#\\C#\\Lab250122_NET_UNIT\\lab250122_net_unit\\db.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{07609A2B-D6DA-4A58-B371-8B7B085252EA}|Lab250122_NET_UNIT\\Lab250122_NET_UNIT.csproj|solutionrelative:lab250122_net_unit\\db.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|Lab250122_NET_UNIT||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07609A2B-D6DA-4A58-B371-8B7B085252EA}|Lab250122_NET_UNIT\\Lab250122_NET_UNIT.csproj|d:\\c#\\c#\\lab250122_net_unit\\lab250122_net_unit\\properties\\settings.settings||{6D2695F9-5365-4A78-89ED-F205C045BFE6}",
+      "RelativeMoniker": "D:0:0:{07609A2B-D6DA-4A58-B371-8B7B085252EA}|Lab250122_NET_UNIT\\Lab250122_NET_UNIT.csproj|solutionrelative:lab250122_net_unit\\properties\\settings.settings||{6D2695F9-5365-4A78-89ED-F205C045BFE6}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,44 +36,80 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DB.cs",
-              "DocumentMoniker": "D:\\C#\\C#\\Lab250122_NET_UNIT\\Lab250122_NET_UNIT\\DB.cs",
-              "RelativeDocumentMoniker": "Lab250122_NET_UNIT\\DB.cs",
-              "ToolTip": "D:\\C#\\C#\\Lab250122_NET_UNIT\\Lab250122_NET_UNIT\\DB.cs*",
-              "RelativeToolTip": "Lab250122_NET_UNIT\\DB.cs*",
-              "ViewState": "AgIAAEMAAAAAAAAAAAAwwE0AAAAjAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\Users\\Silence\\Desktop\\Lab_80_\u4E09\u9805\u7DF4\u7FD2_C\\Lab_80_\u4E09\u9805\u7DF4\u7FD2_C_\u7DF4\u7FD2\u8AAA\u660E\\Form1.cs",
+              "ToolTip": "C:\\Users\\Silence\\Desktop\\Lab_80_\u4E09\u9805\u7DF4\u7FD2_C\\Lab_80_\u4E09\u9805\u7DF4\u7FD2_C_\u7DF4\u7FD2\u8AAA\u660E\\Form1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-03T07:21:01.358Z",
+              "WhenOpened": "2025-02-04T03:46:59.186Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Form8_product_Category.cs",
-              "DocumentMoniker": "D:\\C#\\C#\\Lab250122_NET_UNIT\\Lab250122_NET_UNIT\\Form8_product_Category.cs",
-              "RelativeDocumentMoniker": "Lab250122_NET_UNIT\\Form8_product_Category.cs",
-              "ToolTip": "D:\\C#\\C#\\Lab250122_NET_UNIT\\Lab250122_NET_UNIT\\Form8_product_Category.cs*",
-              "RelativeToolTip": "Lab250122_NET_UNIT\\Form8_product_Category.cs*",
-              "ViewState": "AgIAACEAAAAAAAAAAAAIwC8AAAAAAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "DB.cs",
+              "DocumentMoniker": "D:\\C#\\C#\\Lab250122_NET_UNIT\\Lab250122_NET_UNIT\\DB.cs",
+              "RelativeDocumentMoniker": "Lab250122_NET_UNIT\\DB.cs",
+              "ToolTip": "D:\\C#\\C#\\Lab250122_NET_UNIT\\Lab250122_NET_UNIT\\DB.cs",
+              "RelativeToolTip": "Lab250122_NET_UNIT\\DB.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAkwDMAAABwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-03T07:12:01.093Z",
+              "WhenOpened": "2025-02-04T02:41:36.273Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Lab250122_NET_UNIT",
+              "DocumentMoniker": "D:\\C#\\C#\\Lab250122_NET_UNIT\\Lab250122_NET_UNIT\\Lab250122_NET_UNIT.csproj",
+              "RelativeDocumentMoniker": "Lab250122_NET_UNIT\\Lab250122_NET_UNIT.csproj",
+              "ToolTip": "D:\\C#\\C#\\Lab250122_NET_UNIT\\Lab250122_NET_UNIT\\Lab250122_NET_UNIT.csproj",
+              "RelativeToolTip": "Lab250122_NET_UNIT\\Lab250122_NET_UNIT.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-02-04T03:32:40.567Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form9_prt_viewsheet.Designer.cs",
+              "DocumentMoniker": "D:\\C#\\C#\\Lab250122_NET_UNIT\\Lab250122_NET_UNIT\\Form9_prt_viewsheet.Designer.cs",
+              "RelativeDocumentMoniker": "Lab250122_NET_UNIT\\Form9_prt_viewsheet.Designer.cs",
+              "ToolTip": "D:\\C#\\C#\\Lab250122_NET_UNIT\\Lab250122_NET_UNIT\\Form9_prt_viewsheet.Designer.cs",
+              "RelativeToolTip": "Lab250122_NET_UNIT\\Form9_prt_viewsheet.Designer.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAgwEIAAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-04T02:28:21.856Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Form8_product_Category.cs [\u8A2D\u8A08]",
-              "DocumentMoniker": "D:\\C#\\C#\\Lab250122_NET_UNIT\\Lab250122_NET_UNIT\\Form8_product_Category.cs",
-              "RelativeDocumentMoniker": "Lab250122_NET_UNIT\\Form8_product_Category.cs",
-              "ToolTip": "D:\\C#\\C#\\Lab250122_NET_UNIT\\Lab250122_NET_UNIT\\Form8_product_Category.cs [\u8A2D\u8A08]*",
-              "RelativeToolTip": "Lab250122_NET_UNIT\\Form8_product_Category.cs [\u8A2D\u8A08]*",
+              "Title": "Form9_prt_viewsheet.cs",
+              "DocumentMoniker": "D:\\C#\\C#\\Lab250122_NET_UNIT\\Lab250122_NET_UNIT\\Form9_prt_viewsheet.cs",
+              "RelativeDocumentMoniker": "Lab250122_NET_UNIT\\Form9_prt_viewsheet.cs",
+              "ToolTip": "D:\\C#\\C#\\Lab250122_NET_UNIT\\Lab250122_NET_UNIT\\Form9_prt_viewsheet.cs",
+              "RelativeToolTip": "Lab250122_NET_UNIT\\Form9_prt_viewsheet.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAIwAwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-03T07:05:19.657Z",
+              "WhenOpened": "2025-02-04T01:44:19.506Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form9_prt_viewsheet.cs [\u8A2D\u8A08]",
+              "DocumentMoniker": "D:\\C#\\C#\\Lab250122_NET_UNIT\\Lab250122_NET_UNIT\\Form9_prt_viewsheet.cs",
+              "RelativeDocumentMoniker": "Lab250122_NET_UNIT\\Form9_prt_viewsheet.cs",
+              "ToolTip": "D:\\C#\\C#\\Lab250122_NET_UNIT\\Lab250122_NET_UNIT\\Form9_prt_viewsheet.cs [\u8A2D\u8A08]",
+              "RelativeToolTip": "Lab250122_NET_UNIT\\Form9_prt_viewsheet.cs [\u8A2D\u8A08]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-04T01:38:46.171Z",
               "EditorCaption": " [\u8A2D\u8A08]"
             }
           ]

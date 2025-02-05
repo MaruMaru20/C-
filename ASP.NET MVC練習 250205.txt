@@ -1,0 +1,233 @@
+███████  2025/02/05  15:30
+
+
+50. 在 ASP.NET MVC 中的路徑引用
+
+    在程式碼中使用檔案和資料夾路徑
+    https://learn.microsoft.com/zh-tw/aspnet/web-pages/overview/getting-started/introducing-razor-syntax-c#working-with-file-and-folder-paths-in-code
+
+    閱讀官方文件的說明後，請嘗試填入底下空格
+
+    完整的URL：  https://localhost:7117/ (請將MVC專案運行起來以後的URL貼在這裡)
+    伺服器名稱： localhost:7117
+    虛擬路徑：   (?)
+    實體路徑：   D:\MvcMovie\MvcMovie\Views\Home\Index.cshtml
+
+
+
+    -----------------------------------------
+
+
+52. 在 _Layout.cshtml 透過 <link> 標籤引用 css 檔案
+
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/MvcMovie.styles.css" asp-append-version="true" />
+
+    問題：site.css 存放在專案的哪裡 (哪個資料夾底下)?
+    答案：
+
+
+    問題：MvcMovie.styles.css 存放在專案的哪裡 (哪個資料夾底下)?
+    答案：
+        1. 專案運行起來
+        2. 檢查網頁，找到 <link> 標籤
+        3. ...
+
+
+    問題：是否還記得 CSS 的權重?
+    答案：如果不記得，請閱讀先前自己在CSS課程的筆記
+        * !important > inline style > #id > .class > Element(標籤名稱)
+        * css檔案如果進行相同標籤的樣式設定，後面的會蓋掉前面的
+
+
+    問題：這兩個css檔案如果進行相同標籤的樣式設定，哪一個的權重較高?
+    答案：
+        (實驗步驟)
+
+        1. 在 \wwwroot\css\site.css 寫下 i { color:red; }
+
+        2. 在 \Views\Shared\_Layout.cshtml.css 寫下 i { color:green; }
+
+        3. 在 \Views\Shared\_Layout.cshtml 檔案
+            <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+            <link rel="stylesheet" href="~/MvcMovie.styles.css" asp-append-version="true" />
+            修改為
+            <link rel="stylesheet" href="~/MvcMovie.styles.css" asp-append-version="true" />
+            <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+
+        4. 得到實驗結果。
+
+
+    -----------------------------------------
+
+
+    練習：請根據官方文件的說明，加入頁面專屬的css檔案
+        CSS 隔離
+        https://learn.microsoft.com/zh-tw/aspnet/core/razor-pages/?view=aspnetcore-8.0&tabs=visual-studio#css-isolation
+
+    步驟：
+
+    -----------------------------------------
+
+
+    練習：目前可以寫css的地方有三個，請安排實驗，討論「css權重」在 ASP.NET MVC 架構底下是否有差異？
+        (「已知」的css權重，會不會因為 ASP.NET MVC 架構 而有所不同？)
+    
+
+    步驟：(請自行安排實驗)
+
+
+
+    -----------------------------------------
+
+
+60. 為什麼我的 ASP.NET MVC 專案跑不起來/不會動/看不到網頁
+    * server 有沒有啟動?
+    * css 樣式
+    * Views 資料夾底下有沒有 cshtml 檔案
+
+
+    -----------------------------------------
+
+
+70. 討論：CSS檔案跟JS檔案存放的路徑規劃
+    
+    方案A：我想要把所有的css放在css資料夾下面就好了
+            wwwroot\css\bootstrap.css
+            wwwroot\css\myapple.css
+            wwwroot\css\animation.css
+
+    方案B：我想要比照現有的 MVC專案結構
+            wwwroot\css\自己寫的
+            wwwroot\lib\套件名稱\套件的東西
+
+    方案C: 以上皆非
+
+    * 請確認哪一種方式是「自己」覺得寫起來會比較順的
+
+
+
+███████  2025/02/05  14:15
+
+35. 請嘗試處理下列問題/練習
+
+    * 透過下列問題理解 ASP.NET Core MVC 專案結構
+        -> 要開始製作大專題的你，需要知道檔案要如何存放
+
+
+    練習：導覽列目前有 Home 以及 Privacy 這兩個連結
+        請試著增加「Member」連結，點選後可以跳轉到 google首頁
+
+    答案：
+
+    -----------------------------------------
+
+
+    問題：為什麼在 _Layout.cshtml 加入 「Member」連結，
+        Index.cshtml 和 Privacy.cshtml 也會看的到 「Member」連結？
+
+    答案：_Layout.cshtml
+        公版 | 母版 | 主板 | 樣板 | 模板
+        相同的標籤/每一個頁面都需要的標籤 可以放在這裡
+
+
+
+    練習：請嘗試在網頁中增加 css 樣式
+        *  什麼樣式都可以，例如改變文字顏色或者背景顏色等等
+            確認你自己是否還記得 css 如何添加在網頁裡面
+
+
+    問題：目前專案預設開啟的是 Home頁面
+        要調整哪一個檔案，就可以將預設開啟的頁面改為 Privacy頁面
+    答案：
+
+
+    問題：呼叫函式變得好奇怪..
+    答案：具名和選擇性引數 (C# 程式設計手冊)
+        https://learn.microsoft.com/zh-tw/dotnet/csharp/programming-guide/classes-and-structs/named-and-optional-arguments
+    
+
+        * 建議：想要測試簡單的C#語法的時候，選擇 "主控台應用程式(.NET Framework)" 專案類型
+        
+
+
+
+███████  2025/02/05  14:05
+
+33. 專案開啟後，請試著進行底下操作，或回答問題
+
+    練習： 導覽列目前有 Home 以及 Privacy 這兩個連結
+        請嘗試點選 Home 以及 Privacy 確認網頁可以正常運作
+
+
+    問題：請觀察方案總管，目前看到的 Privacy頁面有可能會在哪個資料夾中？
+    答案：
+
+
+    練習： 請嘗試修改 Privacy頁面，加入一些文字內容
+    答案： 
+    
+
+
+
+███████  2025/02/05  13:30
+
+    TCP/UDP埠列表
+    https://zh.wikipedia.org/zh-tw/TCP/UDP%E7%AB%AF%E5%8F%A3%E5%88%97%E8%A1%A8
+
+
+    練習：透過官方文件觀察
+        ASP.NET Web Forms 的方案總管底下的檔案 與
+        ASP.NET Core MVC 的方案總管底下的檔案 的差異
+
+        ASP.NET Web Forms 
+        https://learn.microsoft.com/zh-tw/aspnet/web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/create-the-project
+
+        * ASP.NET Web Forms 不需要跟著文件操作，查看圖片比較即可
+        * 未來查看技術文件的時候，需要識別，現在看的這一份文件是不是 "ASP.NET Core MVC"
+
+
+20. ASP.NET Core MVC 概觀
+    https://learn.microsoft.com/zh-tw/aspnet/core/mvc/overview?view=aspnetcore-8.0
+
+
+
+███████  2025/02/05  11:22
+
+30. 根據文件，創造第一個ASP.NET MVC專案
+
+    開始使用 ASP.NET Core MVC
+    https://learn.microsoft.com/zh-tw/aspnet/core/tutorials/first-mvc-app/start-mvc?view=aspnetcore-8.0&tabs=visual-studio
+
+
+
+
+███████  2025/02/05  10:05 ~ 10:22 ~ 11:11
+
+19. 討論：台灣高鐵的首頁輪播圖片區塊是否需要存入資料庫？
+    若「需要」，請提供資料表的欄位與設定
+    若「不需要」，請說明若輪播圖片需要更換時，應該要如何操作(改程式)
+
+
+    => 兩組覺得需要、兩組覺得不需要
+    => 每個人的設計理念或者實作方式不同沒關係，程式碼有出來就好。
+
+
+
+███████  2025/02/05  09:15 
+
+10. 關於 ASP.NET (ASP, Active Server Pages)
+    . ASP.NET 概觀：https://learn.microsoft.com/zh-tw/aspnet/overview
+    . 維基百科(.NET Framework)：https://zh.wikipedia.org/zh-tw/.NET%E6%A1%86%E6%9E%B6
+    . 維基百科(.NET )：https://zh.wikipedia.org/zh-tw/.NET
+    . 在 ASP.NET 4.x 和 ASP.NET Core 之間進行選擇：https://docs.microsoft.com/zh-tw/aspnet/core/fundamentals/choose-aspnet-framework?view=aspnetcore-6.0
+
+
+
+15. 對「其他」伺服器請求服務
+    第一銀行個人網銀：  https://ibank.firstbank.com.tw/NetBank/index103.html
+    第一銀行學雜費：https://eschool.firstbank.com.tw/member/index.aspx
+    丹迪訂房：  https://booking.taipeiinngroup.com/nv/reservation/reservation.php?hid=105
+    聯合新聞：  https://udn.com/news/cate/2/6649
+    台灣高鐵：  https://www.thsrc.com.tw/
+

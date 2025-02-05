@@ -63,8 +63,8 @@ namespace Lab250122_NET_UNIT
         {
             string sql = "select ProductCategoryKey,EnglishProductCategoryName from DimProductCategory";
             comboBox2.DataSource = myDB.GetDataTable(sql, "EnglishProductCategoryName");
-            comboBox2.DisplayMember = "ProductCategoryKey";
-            comboBox2.ValueMember = "EnglishProductCategoryName";
+            comboBox2.DisplayMember = "EnglishProductCategoryName"; 
+            comboBox2.ValueMember = "ProductCategoryKey";
             comboBox2.SelectedIndexChanged += ComboBox2_SelectedIndexChanged;
 
 
@@ -83,6 +83,14 @@ namespace Lab250122_NET_UNIT
 
             dataGridView1.DataSource = myDB.GetDataTable(sql, "@id", key);
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //create viewsheet
+            //SQL  檢視表  與  資料表  的差異是什麼?
+            //資料表 select up date insert delete
+            //檢視表 selete only
         }
     }
 }
