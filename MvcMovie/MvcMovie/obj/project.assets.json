@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Desktop\\01\\MvcMovie\\MvcMovie\\MvcMovie.csproj",
+      "projectUniqueName": "E:\\C#\\C#\\MvcMovie\\MvcMovie\\MvcMovie.csproj",
       "projectName": "MvcMovie",
-      "projectPath": "C:\\Users\\User\\Desktop\\01\\MvcMovie\\MvcMovie\\MvcMovie.csproj",
+      "projectPath": "E:\\C#\\C#\\MvcMovie\\MvcMovie\\MvcMovie.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\Desktop\\01\\MvcMovie\\MvcMovie\\obj\\",
+      "outputPath": "E:\\C#\\C#\\MvcMovie\\MvcMovie\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

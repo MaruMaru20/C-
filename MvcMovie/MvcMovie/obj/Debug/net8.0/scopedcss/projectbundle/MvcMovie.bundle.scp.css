@@ -1,3 +1,8 @@
+/* _content/MvcMovie/Views/Home/Index.cshtml.rz.scp.css */
+h1[b-pzks9zzr9b] 
+{
+    color:forestgreen;
+}
 /* _content/MvcMovie/Views/Shared/_Layout.cshtml.rz.scp.css */
 /* Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
@@ -9,7 +14,7 @@ a.navbar-brand[b-0uvum7rpp4] {
 }
 
 h1[b-0uvum7rpp4] {
-color: gray;
+color: gold;
 }
 a[b-0uvum7rpp4] {
   color: #0077cc;
