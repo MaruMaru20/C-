@@ -1,0 +1,760 @@
+███████  2025/02/07  16:00
+
+
+35. 資料是否可以跨頁面存取 - 討論二
+
+    練習： 
+        1. 在 TestData 新增檢視 DataSession
+        2. 確認專案可以開啟
+
+    答案：
+
+    -----------------------------------------
+
+    練習：請根據底下文件的說明，練習將對應的程式碼加入到專案中
+        設定工作階段狀態 AddSession 的呼叫
+        https://learn.microsoft.com/zh-tw/aspnet/core/fundamentals/app-state?view=aspnetcore-8.0#configure-session-state
+
+
+    步驟： 
+
+    -----------------------------------------
+
+        
+    練習： 請根據底下文件的說明，練習將對應的程式碼加入到專案中
+        設定和取得工作階段值
+        https://learn.microsoft.com/zh-tw/aspnet/core/fundamentals/app-state?view=aspnetcore-8.0#set-and-get-session-values
+
+        在 ASP.NET Core 中存取 HttpContext
+        https://learn.microsoft.com/zh-tw/aspnet/core/fundamentals/http-context?view=aspnetcore-8.0#access-httpcontext-from-a-razor-view-in-mvc
+
+
+    步驟： 
+
+    -----------------------------------------
+
+    練習： 目前 TestData 底下共有四個檢視頁面，
+            請測試這四個檢視頁面是否都可以獲得 @Context.Session 底下的資料
+
+    步驟：
+
+
+
+
+
+
+███████  2025/02/07  15:10
+
+30. 資料是否可以跨頁面存取 - 討論一
+
+    練習： 
+        1. 在 TestData 新增檢視 DataCat 和 DataDog
+        2. 建立超連結，讓三個檢視頁面可以彼此跳轉
+
+    答案：
+    
+    -----------------------------------------
+
+    練習：
+        3. 將 Index頁面 的部份內容複製貼上到 DataCat頁面 或者 DataDog頁面
+        4. 請運行專案，觀察結果
+
+    答案： 
+    
+    -----------------------------------------
+
+    問題： 為什麼只有 Index頁面 可以看到資料？
+
+    答案： ViewBag.A2 只有給 Index頁面
+    
+    -----------------------------------------
+
+    練習：
+        1. 動作結果 Index 加入
+            TempData["D1"] = "端午節";
+            TempData["D2"] = "萬聖節";
+            
+        2. 在 Index頁面 、 DataCat頁面 、 DataDog頁面 加入
+            <hr />
+            <p>  看資料 D1 ：@TempData["D1"]       </p>
+            <p>  看資料 D2 ：@TempData.Peek("D2")  </p>
+            <hr />
+
+        3. 請運行專案，開啟 Index頁面 後，點選 DataCat頁面 或者 DataDog頁面
+            並觀察結果
+
+    小結論:
+    
+
+
+
+
+
+
+
+
+███████  2025/02/07  14:15
+
+25. 比較傳遞資料的差異
+
+    練習：
+        1. 繼續使用剛剛的 Controller TestData
+
+        2. 在 return View() 前面， 加入底下程式碼 
+            ViewData["A3"] = "兒童節";
+            TempData["A4"] = "中秋節";
+
+        3. 在 Index.cshtml 裡面，取得資料並且顯示在畫面上
+
+    -----------------------------------------
+
+
+    練習： 
+        1. 繼續使用剛剛的 Controller TestData
+
+        2. 比照上述步驟，使用 ViewBag 、 ViewData 、TempData 
+            等三種方式，將數字資料傳遞到檢視頁面
+        
+        3. 試著在檢視(View)頁面(cshtml)進行數字加法運算，觀察結果
+
+    運行結果：
+
+
+    -----------------------------------------
+
+
+    練習： 
+        1. 想要在畫面上呈現 日期/時間日期 ， 的標籤是哪些？
+
+        2. 從 controller 帶出 日期/時間日期 放到檢視頁面顯示
+
+    答案：
+
+
+
+
+
+
+
+███████  2025/02/07  13:45
+
+10. 請創造一個 ASP.NET MVC專案
+    專案名稱：依照自己上課習慣的方式即可
+
+
+20. 資料傳遞 - 開始討論 controller 到 view 之間的資料傳遞
+
+
+    練習： 
+        1. 建立一個 Controller TestData 
+
+        2. 配合 Controller 產生 Index 頁面，並確認專案可以正常運行
+
+        3. 在 Index 的 return View() 前面， 加入底下程式碼
+            ViewBag.A1 = 7;
+            ViewBag.A2 = "皮卡丘";
+
+        4. Index.cshtml ，加入底下程式碼
+            @ViewBag.A1
+            <hr />
+            @ViewBag.A2
+            <hr />
+         
+        -> 運行專案，觀察程式碼運作結果or錯誤的訊息
+
+    -----------------------------------------
+    
+    練習：請將 字串皮卡丘 放入到 p 標籤的內容中
+    答案：
+    
+
+    練習：請將 字串皮卡丘 放入到 input 標籤對應的屬性中
+    答案：
+    
+    -----------------------------------------
+
+    練習： 目前看見數字7和字串皮卡丘
+        我希望寫一個迴圈，使用數字7和字串皮卡丘
+
+    答案：
+
+
+
+
+
+
+███████  2025/02/07  13:30
+
+    * 延伸閱讀：如果覺得排版是弱點，可以採用 bootstrap 或者 其他線上的templete ，協助你完成大專。
+        
+        . bootstrap examples：https://getbootstrap.com/docs/5.3/examples/
+
+        . bootstrap template：https://startbootstrap.com/?showPro=false&showVue=false&showAngular=false
+
+
+  ----------------------------------------- 
+
+(這個漏掉了，原本放在 ? 可為 Null 的值類型 的後面)
+38. 是否會想要在 Shared資料夾底下再新增子資料夾
+    將 Layout 分資料夾存放？
+
+    練習：在 Shared資料夾底下加入 Apple資料夾，
+        將 _LayoutYellow.cshtml 拖曳到 Apple資料夾存放
+
+
+    問題：當 Layout 檔案位置改變後，先前可以跑的程式碼要如何配合修正？
+
+    答案:
+    
+    
+
+
+
+███████  2025/02/07  11:16
+
+    練習：請從這裡取得 bootstrap 的不同版本
+        https://www.w3schools.com/bootstrap/bootstrap_ver.asp
+
+
+    練習：增加兩顆按鈕，並且嘗試自己寫css改變按鈕背景底色
+
+    練習：引用 bootstrap 4.x 版本，並且將剛剛的兩顆按鈕 套用 .btn 
+    
+
+-----------------------------------------
+
+    問題：為什麼套用 bootstrap 4.x 版本 後，按鈕顏色不見了？
+    
+    答案： 
+
+-----------------------------------------
+    
+    問題：為什麼 bootstrap 4.x 版本的 .text-right 可以在 <p> 發生作用，但是 <span> 不行
+
+    答案：
+    
+-----------------------------------------
+
+
+    問題：bootstrap 4.x 版本的 .text-right 有效果，但是
+          bootstrap 5.x 版本的 .text-right 就沒有效果了
+          在 bootstrap 5.x 應該要如何修改？
+   
+    答案： class="text-end"
+
+    
+
+
+
+
+███████  2025/02/07  10:25
+
+** 請依照自己的想法創建新專案或者沿用先前的空白專案
+
+
+10. 新增 wwwroot 資料夾
+
+    練習：專案右鍵> 加入> 新增資料夾> wwwroot> 成功後資料夾的圖示會變成地球的圖示
+          wwwroot地球右鍵> 加入> 新增資料夾> css
+          css資料夾右鍵> 新增項目> 樣式表> 
+          預設名稱為 StyleSheet.css 建議 不要用預設名稱，任意命名 (稍後比較好找)
+
+          例如: MyCat.css
+
+
+    練習：在樣式表添加內容 -> 在 Layout 試著引用自己寫的樣式表
+
+
+-----------------------------------------
+
+
+20. 大專是否會使用 bootstrap ？
+
+    ** 注意，底下問題可能有陷阱
+
+
+    練習：下載 bootstrap 並且加入 bootstrap.css 到專案中
+        ** 上課時，把 bootstrap.css 放在 css 資料夾底下就好 (比較好找)
+        ** 大專時，各組可以有不一樣的想法和存放位置
+
+
+    問題：使用 bootstrap 寫的 table 範例，直接貼上不能用，為什麼
+        https://getbootstrap.com/docs/5.3/content/tables/
+
+    答案：
+
+
+
+
+
+
+
+
+
+███████  2025/02/07  09:24
+
+35. 是否會覺得每一個頁面都要指定Layout有點麻煩？
+
+    練習：觀察底下程式碼，他們應該要被寫在哪裡?
+            以及 如果程式碼執行成功，可能會看到什麼?
+
+        @ViewContext.RouteData.Values["controller"] 
+        @ViewContext.RouteData.Values["action"]
+
+
+    運行結果：透過 URL 觀察程式內容
+        https://localhost:xxxx/Anime/Index
+        https://localhost:xxxx/Anime/Pokemon
+        https://localhost:xxxx/Anime/Doraemon 
+
+
+    ---------------------------------------------------
+
+    練習：希望使用者呼叫小叮噹頁面就套用 _LayoutBlue.cshtml
+        神奇寶貝就套用 _LayoutYellow.cshtml
+        (不同的頁面套用不同的 Layout)
+
+    答案：
+
+    ---------------------------------------------------
+
+
+    討論：關於剛剛在寫程式碼的時候，如果有出現綠色波浪..
+
+    相關資料：
+        解決可為 Null 的警告
+        https://learn.microsoft.com/zh-tw/dotnet/csharp/language-reference/compiler-messages/nullable-warnings#possible-null-assigned-to-a-nonnullable-reference
+
+        ? 可為 Null 的值類型
+        https://learn.microsoft.com/zh-tw/dotnet/csharp/language-reference/builtin-types/nullable-value-types
+
+        ! (Null容許) 運算子
+        https://learn.microsoft.com/zh-tw/dotnet/csharp/language-reference/operators/null-forgiving
+
+
+
+    ---------------------------------------------------
+
+
+
+
+
+
+████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+
+
+
+███████  2025/02/06  11:25
+
+20. 如果大專有很多頁面的「版面/版型」相同，該如何處理？
+
+    練習：加入「版面/版型/母版/主板/公版」
+            * 後續的討論，我會以英文稱呼就叫做 Layout 。
+
+    步驟：
+        Views資料夾右鍵> 加入> 新增資料夾> Shared
+
+        Shared資料夾右鍵> 加入> 新增項目> Razor版面配置> 預設名稱是 _Layout.cshtml
+
+        為了稍後方便討論，請修改為 _LayoutYellow.cshtml
+
+        在 _LayoutYellow.cshtml 加入部分標籤
+
+        -> 運行專案，觀察程式碼運作結果or錯誤的訊息
+    
+    運行結果： 
+
+    ---------------------------------------------------
+
+    問題：_LayoutYellow.cshtml 明明有寫了一些內容 ， 但為什麼都沒有出現？
+
+    答案： _ViewStart.cshtml
+    
+    ---------------------------------------------------
+
+    練習：觀察 _ViewStart.cshtml
+            寫了一段 @{ Layout = "_Layout"; }
+            該怎麼說明這段程式碼?
+    答案：
+    
+    ---------------------------------------------------
+
+    練習：透過 URL 確認各個頁面都可以正常開啟
+
+        https://localhost:XXXX/Anime/Index
+        https://localhost:XXXX/Anime/Pokemon
+        https://localhost:XXXX/Anime/Doraemon
+
+
+    問題："假設" Pokemon.cshtml 不想要套用 _LayoutYellow
+            該如何修改？
+
+    答案：
+
+    ---------------------------------------------------
+
+
+30. 大專題是否需要一個以上的「Layout」？
+
+    舉例:
+        這裡套用分類Layout：https://24h.pchome.com.tw/sign/outdoor
+        這裡套用商品Layout：https://24h.pchome.com.tw/prod/DAAG0S-A900H2PE7
+        要如何達到這樣的需求？
+
+
+    練習：請重複 20 的練習，再次加入一個 Layout
+            為了和上一個 Layout 有所區隔
+            這一個請命名為  _LayoutBlue.cshtml
+
+
+    問題：現在 Doraemon.cshtml 套用的是 _LayoutYellow.cshtml
+            (因為在 _ViewStart 設定了這件事)
+            如何在 Doraemon.cshtml 指定使用 _LayoutBlue.cshtml
+
+    答案：
+        
+    ---------------------------------------------------
+
+
+
+███████  2025/02/06  11:05
+
+15. 如果大專除了 Index.cshtml 頁面以外，還需要加入其他頁面，該如何操作?
+
+    練習：在 Anime資料夾右鍵> 加入> 檢視> Razor檢視-空白> Pokemon.cshtml
+            同樣在 Pokemon.cshtml 加入任意文字
+            (稍後透過這個標籤確認自己開啟的真的是 Pokemon.cshtml)
+
+
+    ---------------------------------------------------
+
+
+    問題：運行專案後，無法看見 Pokemon.cshtml 該如何修正？
+
+    答案:
+
+
+    ---------------------------------------------------
+
+    練習：若 Pokemon.cshtml 加入成功了，請比照同樣的方式，加入 Doraemon.cshtml
+
+    步驟：
+       
+
+
+███████  2025/02/06  10:35
+
+    練習：在專案中加入 Controllers 資料夾 
+    步驟：專案> 右鍵> 加入> 新增資料夾
+
+    練習：在 Controllers 資料夾底下 加入 AnimeController.cs 檔案
+    步驟：Controllers資料夾> 右鍵> 加入> 控制器> MVC控制器 - 空白
+        -> 運行專案，觀察程式碼運作結果or錯誤的訊息
+
+    運行結果： 
+
+    -----------------------------------------
+
+
+    練習：開啟 AnimeController.cs 並將滑鼠移動到 Index 名稱上方 右鍵> 新增檢視> Razor檢視 - 空白
+        預設的檔案名稱是 Index.cshtml，這裡保持預設值
+        並且在新增出來的檔案中加入一些標籤
+        -> 運行專案，觀察程式碼運作結果or錯誤的訊息
+
+
+    運行結果： Program.cs 的 app.MapControllerRoute() 必須要配合修改
+
+
+    *** 失敗的話請把這個專案丟掉，再重新建立一次空的專案 ***
+
+
+███████  2025/02/06  10:20
+
+** 提醒，使用空的專案是因為上課要複習，大專建議不要用空的。
+
+10. 建立一個「空的 ASP.NET Core」 專案
+    專案名稱為 Lab今天日期_EmptyMVC
+    陸續添加 MVC專案所需要的 資料夾和檔案
+
+
+    *! 透過下列練習理解 Controllers 與 Views 之間的關係
+        -> 要開始製作大專題的你，需要知道網頁要如何新增出來
+
+
+    練習：目前這個專案的 的 Program.cs 目前缺少了很多內容
+            請對照 MvcMovie專案 的 Program.cs 這個檔案
+            將缺少的內容加入
+            -> 運行專案，觀察程式碼運作結果or錯誤的訊息
+        
+    觀察結果：
+    運行結果： 找不到 localhost 網頁
+
+        60. 為什麼我的 ASP.NET MVC 專案跑不起來/不會動/看不到網頁
+            * Views 資料夾底下有沒有 cshtml 檔案
+    
+
+███████  2025/02/06  09:10
+
+    練習：請根據官方文件的說明，加入頁面專屬的css檔案
+        CSS 隔離
+        https://learn.microsoft.com/zh-tw/aspnet/core/razor-pages/?view=aspnetcore-8.0&tabs=visual-studio#css-isolation
+
+    步驟：
+        1. 針對頁面加入CSS檔案
+            Home資料夾> 右鍵> 加入> 新增項目
+            輸入 Index.cshtml.css 加入樣式表
+            (樣式表的命名預設為「StyleSheet.css」調整為「指定檔案.cshtml.css」)
+
+    -----------------------------------------
+
+
+    練習：目前可以寫css的地方有三個，請安排實驗，討論「css權重」在 ASP.NET MVC 架構底下是否有差異？
+        (「已知」的css權重，會不會因為 ASP.NET MVC 架構 而有所不同？)
+    
+    步驟：(請自行安排實驗)
+
+        目前可以寫css的地方有三個
+            1.  wwwroot資料夾       \wwwroot\css\site.css
+            2.  公版.cshtml.css     \Views\Shared\_Layout.cshtml.css
+            3.  頁面.cshtml.css     \Views\Home\Index.cshtml.css
+
+        實驗步驟
+            1. 確認要找哪個 標籤做實驗
+                <h3>
+
+            2. 確認要找哪個 CSS樣式 做實驗
+                color
+                background-color
+                font-size
+
+    -----------------------------------------
+
+
+70. 討論：CSS檔案跟JS檔案存放的路徑規劃
+    
+    方案A：我想要把所有的css放在css資料夾下面就好了
+            wwwroot\css\bootstrap.css
+            wwwroot\css\myapple.css
+            wwwroot\css\animation.css
+
+    方案B：我想要比照現有的 MVC專案結構
+            wwwroot\css\自己寫的
+            wwwroot\lib\套件名稱\套件的東西
+
+    方案C：以上皆非
+
+    * 請確認哪一種方式是「自己」覺得寫起來會比較順的
+
+
+
+
+████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+
+
+
+
+███████  2025/02/05  15:30
+
+
+50. 在 ASP.NET MVC 中的路徑引用
+
+    在程式碼中使用檔案和資料夾路徑
+    https://learn.microsoft.com/zh-tw/aspnet/web-pages/overview/getting-started/introducing-razor-syntax-c#working-with-file-and-folder-paths-in-code
+
+    閱讀官方文件的說明後，請嘗試填入底下空格
+
+    完整的URL：  https://localhost:7117/ (請將MVC專案運行起來以後的URL貼在這裡)
+    伺服器名稱： localhost:7117
+    虛擬路徑：   (?)
+    實體路徑：   D:\MvcMovie\MvcMovie\Views\Home\Index.cshtml
+
+
+
+    -----------------------------------------
+
+
+52. 在 _Layout.cshtml 透過 <link> 標籤引用 css 檔案
+
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/MvcMovie.styles.css" asp-append-version="true" />
+
+    問題：site.css 存放在專案的哪裡 (哪個資料夾底下)?
+    答案：
+
+
+    問題：MvcMovie.styles.css 存放在專案的哪裡 (哪個資料夾底下)?
+    答案：
+        1. 專案運行起來
+        2. 檢查網頁，找到 <link> 標籤
+        3. ...
+
+
+    問題：是否還記得 CSS 的權重?
+    答案：如果不記得，請閱讀先前自己在CSS課程的筆記
+        * !important > inline style > #id > .class > Element(標籤名稱)
+        * css檔案如果進行相同標籤的樣式設定，後面的會蓋掉前面的
+
+
+    問題：這兩個css檔案如果進行相同標籤的樣式設定，哪一個的權重較高?
+    答案：
+        (實驗步驟)
+
+        0. 在 \Views\Shared\_Layout.cshtml 檔案 寫下 <i>海賊王萬歲</i>
+            例如
+            <main role="main" class="pb-3">
+                <i>海賊王萬歲</i>
+                @RenderBody()
+                <i>航海王萬歲</i>
+            </main>
+
+        1. 在 \wwwroot\css\site.css            寫下 i { color:red; }
+
+        2. 在 \Views\Shared\_Layout.cshtml.css 寫下 i { color:green; }
+
+        3. 在 \Views\Shared\_Layout.cshtml 檔案
+            <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+            <link rel="stylesheet" href="~/MvcMovie.styles.css" asp-append-version="true" />
+            修改為
+            <link rel="stylesheet" href="~/MvcMovie.styles.css" asp-append-version="true" />
+            <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+
+        4. 得到實驗結果。
+
+
+    -----------------------------------------
+
+
+60. 為什麼我的 ASP.NET MVC 專案跑不起來/不會動/看不到網頁
+    * server 有沒有啟動
+    * css 樣式
+    * Views 資料夾底下有沒有 cshtml 檔案
+
+
+███████  2025/02/05  14:15
+
+35. 請嘗試處理下列問題/練習
+
+    * 透過下列問題理解 ASP.NET Core MVC 專案結構
+        -> 要開始製作大專題的你，需要知道檔案要如何存放
+
+
+    練習：導覽列目前有 Home 以及 Privacy 這兩個連結
+        請試著增加「Member」連結，點選後可以跳轉到 google首頁
+
+    答案：
+
+    -----------------------------------------
+
+
+    問題：為什麼在 _Layout.cshtml 加入 「Member」連結，
+        Index.cshtml 和 Privacy.cshtml 也會看的到 「Member」連結？
+
+    答案：_Layout.cshtml
+        公版 | 母版 | 主板 | 樣板 | 模板
+        相同的標籤/每一個頁面都需要的標籤 可以放在這裡
+
+
+
+    練習：請嘗試在網頁中增加 css 樣式
+        *  什麼樣式都可以，例如改變文字顏色或者背景顏色等等
+            確認你自己是否還記得 css 如何添加在網頁裡面
+
+
+    問題：目前專案預設開啟的是 Home頁面
+        要調整哪一個檔案，就可以將預設開啟的頁面改為 Privacy頁面
+    答案：
+
+
+    問題：呼叫函式變得好奇怪..
+    答案：具名和選擇性引數 (C# 程式設計手冊)
+        https://learn.microsoft.com/zh-tw/dotnet/csharp/programming-guide/classes-and-structs/named-and-optional-arguments
+    
+
+        * 建議：想要測試簡單的C#語法的時候，選擇 "主控台應用程式(.NET Framework)" 專案類型
+        
+
+
+
+███████  2025/02/05  14:05
+
+33. 專案開啟後，請試著進行底下操作，或回答問題
+
+    練習： 導覽列目前有 Home 以及 Privacy 這兩個連結
+        請嘗試點選 Home 以及 Privacy 確認網頁可以正常運作
+
+
+    問題：請觀察方案總管，目前看到的 Privacy頁面有可能會在哪個資料夾中？
+    答案：
+
+
+    練習： 請嘗試修改 Privacy頁面，加入一些文字內容
+    答案： 
+    
+
+
+
+███████  2025/02/05  13:30
+
+    TCP/UDP埠列表
+    https://zh.wikipedia.org/zh-tw/TCP/UDP%E7%AB%AF%E5%8F%A3%E5%88%97%E8%A1%A8
+
+
+    練習：透過官方文件觀察
+        ASP.NET Web Forms 的方案總管底下的檔案 與
+        ASP.NET Core MVC 的方案總管底下的檔案 的差異
+
+        ASP.NET Web Forms 
+        https://learn.microsoft.com/zh-tw/aspnet/web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/create-the-project
+
+        * ASP.NET Web Forms 不需要跟著文件操作，查看圖片比較即可
+        * 未來查看技術文件的時候，需要識別，現在看的這一份文件是不是 "ASP.NET Core MVC"
+
+
+20. ASP.NET Core MVC 概觀
+    https://learn.microsoft.com/zh-tw/aspnet/core/mvc/overview?view=aspnetcore-8.0
+
+
+
+███████  2025/02/05  11:22
+
+30. 根據文件，創造第一個ASP.NET MVC專案
+
+    開始使用 ASP.NET Core MVC
+    https://learn.microsoft.com/zh-tw/aspnet/core/tutorials/first-mvc-app/start-mvc?view=aspnetcore-8.0&tabs=visual-studio
+
+
+
+
+███████  2025/02/05  10:05 ~ 10:22 ~ 11:11
+
+19. 討論：台灣高鐵的首頁輪播圖片區塊是否需要存入資料庫？
+    若「需要」，請提供資料表的欄位與設定
+    若「不需要」，請說明若輪播圖片需要更換時，應該要如何操作(改程式)
+
+
+    => 兩組覺得需要、兩組覺得不需要
+    => 每個人的設計理念或者實作方式不同沒關係，程式碼有出來就好。
+
+
+
+███████  2025/02/05  09:15 
+
+10. 關於 ASP.NET (ASP, Active Server Pages)
+    . ASP.NET 概觀：https://learn.microsoft.com/zh-tw/aspnet/overview
+    . 維基百科(.NET Framework)：https://zh.wikipedia.org/zh-tw/.NET%E6%A1%86%E6%9E%B6
+    . 維基百科(.NET )：https://zh.wikipedia.org/zh-tw/.NET
+    . 在 ASP.NET 4.x 和 ASP.NET Core 之間進行選擇：https://docs.microsoft.com/zh-tw/aspnet/core/fundamentals/choose-aspnet-framework?view=aspnetcore-6.0
+
+
+
+15. 對「其他」伺服器請求服務
+    第一銀行個人網銀：  https://ibank.firstbank.com.tw/NetBank/index103.html
+    第一銀行學雜費：https://eschool.firstbank.com.tw/member/index.aspx
+    丹迪訂房：  https://booking.taipeiinngroup.com/nv/reservation/reservation.php?hid=105
+    聯合新聞：  https://udn.com/news/cate/2/6649
+    台灣高鐵：  https://www.thsrc.com.tw/
+

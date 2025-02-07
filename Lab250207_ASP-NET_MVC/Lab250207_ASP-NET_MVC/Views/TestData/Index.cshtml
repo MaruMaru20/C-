@@ -1,0 +1,61 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@{
+
+}
+<hr />
+<p>GOGOGOGO</p>
+<hr />
+<p>
+	<a href="\testdata\datacat"> cat </a>
+    |　
+    <a href="\testdata\datadog"> dog </a>
+    |　
+    <a href="\testdata\datasession"> datasession </a>
+</p>
+
+<bdog>
+<hr />
+
+@ViewBag.A1
+<h1>@ViewBag.A2</h1>
+
+<hr />
+@ViewBag.A2
+|
+@ViewData["A3"]
+|
+@TempData["A4"]
+<input type="text" name="name" value="@ViewBag.A1" />
+<hr />
+@for (int i = 0; i < ViewBag.A1; i++)
+{
+	@ViewBag.A2
+}
+
+<hr />
+@*1.字串串接*@
+@(ViewBag.Q1 + 10)
+@* object不能套用 *@
+@((int?)ViewData["Q2"] + 10)
+@((int?)TempData["Q3"] + 10)
+
+<hr />
+@* 日期討論 *@
+<input type="date" name="name" value="@ViewBag.D2" />
+<input type="datetime" name="name" value="@ViewBag.D2" /> 
+<input type="datetime-local" name="name" value="@ViewBag.D2" />
+
+
+
+<hr />
+    @* 跨頁面取資料 *@
+    <hr />
+    <p>跨頁面取資料 tempdata</p>
+    <p>  看資料 H1 ：@TempData["H1"]       </p>
+    <p>  看資料 H2 ：@TempData.Peek("H2")  </p>
+    <hr />
+
+

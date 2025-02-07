@@ -1,0 +1,142 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\01\\Lab250206_EmptyMVC\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{185C8472-8DA4-47DE-9D0B-3365A926805F}|Lab250206_EmptyMVC\\Lab250206_EmptyMVC.csproj|c:\\users\\user\\desktop\\01\\lab250206_emptymvc\\lab250206_emptymvc\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{185C8472-8DA4-47DE-9D0B-3365A926805F}|Lab250206_EmptyMVC\\Lab250206_EmptyMVC.csproj|solutionrelative:lab250206_emptymvc\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{185C8472-8DA4-47DE-9D0B-3365A926805F}|Lab250206_EmptyMVC\\Lab250206_EmptyMVC.csproj|c:\\users\\user\\desktop\\01\\lab250206_emptymvc\\lab250206_emptymvc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{185C8472-8DA4-47DE-9D0B-3365A926805F}|Lab250206_EmptyMVC\\Lab250206_EmptyMVC.csproj|solutionrelative:lab250206_emptymvc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{185C8472-8DA4-47DE-9D0B-3365A926805F}|Lab250206_EmptyMVC\\Lab250206_EmptyMVC.csproj|c:\\users\\user\\desktop\\01\\lab250206_emptymvc\\lab250206_emptymvc\\views\\shared\\bpple\\_layoutx.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{185C8472-8DA4-47DE-9D0B-3365A926805F}|Lab250206_EmptyMVC\\Lab250206_EmptyMVC.csproj|solutionrelative:lab250206_emptymvc\\views\\shared\\bpple\\_layoutx.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{185C8472-8DA4-47DE-9D0B-3365A926805F}|Lab250206_EmptyMVC\\Lab250206_EmptyMVC.csproj|c:\\users\\user\\desktop\\01\\lab250206_emptymvc\\lab250206_emptymvc\\views\\anime\\jeff.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{185C8472-8DA4-47DE-9D0B-3365A926805F}|Lab250206_EmptyMVC\\Lab250206_EmptyMVC.csproj|solutionrelative:lab250206_emptymvc\\views\\anime\\jeff.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{185C8472-8DA4-47DE-9D0B-3365A926805F}|Lab250206_EmptyMVC\\Lab250206_EmptyMVC.csproj|c:\\users\\user\\desktop\\01\\lab250206_emptymvc\\lab250206_emptymvc\\views\\anime\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{185C8472-8DA4-47DE-9D0B-3365A926805F}|Lab250206_EmptyMVC\\Lab250206_EmptyMVC.csproj|solutionrelative:lab250206_emptymvc\\views\\anime\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{185C8472-8DA4-47DE-9D0B-3365A926805F}|Lab250206_EmptyMVC\\Lab250206_EmptyMVC.csproj|c:\\users\\user\\desktop\\01\\lab250206_emptymvc\\lab250206_emptymvc\\wwwroot\\css\\ok.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{185C8472-8DA4-47DE-9D0B-3365A926805F}|Lab250206_EmptyMVC\\Lab250206_EmptyMVC.csproj|solutionrelative:lab250206_emptymvc\\wwwroot\\css\\ok.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{185C8472-8DA4-47DE-9D0B-3365A926805F}|Lab250206_EmptyMVC\\Lab250206_EmptyMVC.csproj|c:\\users\\user\\desktop\\01\\lab250206_emptymvc\\lab250206_emptymvc\\controllers\\animecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{185C8472-8DA4-47DE-9D0B-3365A926805F}|Lab250206_EmptyMVC\\Lab250206_EmptyMVC.csproj|solutionrelative:lab250206_emptymvc\\controllers\\animecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Jeff.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\01\\Lab250206_EmptyMVC\\Lab250206_EmptyMVC\\Views\\Anime\\Jeff.cshtml",
+              "RelativeDocumentMoniker": "Lab250206_EmptyMVC\\Views\\Anime\\Jeff.cshtml",
+              "ToolTip": "C:\\Users\\User\\Desktop\\01\\Lab250206_EmptyMVC\\Lab250206_EmptyMVC\\Views\\Anime\\Jeff.cshtml",
+              "RelativeToolTip": "Lab250206_EmptyMVC\\Views\\Anime\\Jeff.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-06T03:17:00.515Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\01\\Lab250206_EmptyMVC\\Lab250206_EmptyMVC\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "Lab250206_EmptyMVC\\Views\\_ViewStart.cshtml",
+              "ToolTip": "C:\\Users\\User\\Desktop\\01\\Lab250206_EmptyMVC\\Lab250206_EmptyMVC\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "Lab250206_EmptyMVC\\Views\\_ViewStart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-06T03:51:43.574Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_LayoutX.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\01\\Lab250206_EmptyMVC\\Lab250206_EmptyMVC\\Views\\Shared\\Bpple\\_LayoutX.cshtml",
+              "RelativeDocumentMoniker": "Lab250206_EmptyMVC\\Views\\Shared\\Bpple\\_LayoutX.cshtml",
+              "ToolTip": "C:\\Users\\User\\Desktop\\01\\Lab250206_EmptyMVC\\Lab250206_EmptyMVC\\Views\\Shared\\Bpple\\_LayoutX.cshtml",
+              "RelativeToolTip": "Lab250206_EmptyMVC\\Views\\Shared\\Bpple\\_LayoutX.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-06T03:51:22.233Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\01\\Lab250206_EmptyMVC\\Lab250206_EmptyMVC\\Views\\Anime\\Index.cshtml",
+              "RelativeDocumentMoniker": "Lab250206_EmptyMVC\\Views\\Anime\\Index.cshtml",
+              "ToolTip": "C:\\Users\\User\\Desktop\\01\\Lab250206_EmptyMVC\\Lab250206_EmptyMVC\\Views\\Anime\\Index.cshtml",
+              "RelativeToolTip": "Lab250206_EmptyMVC\\Views\\Anime\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-06T02:52:27.626Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\01\\Lab250206_EmptyMVC\\Lab250206_EmptyMVC\\Program.cs",
+              "RelativeDocumentMoniker": "Lab250206_EmptyMVC\\Program.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\01\\Lab250206_EmptyMVC\\Lab250206_EmptyMVC\\Program.cs",
+              "RelativeToolTip": "Lab250206_EmptyMVC\\Program.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABkAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T02:27:41.027Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AnimeController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\01\\Lab250206_EmptyMVC\\Lab250206_EmptyMVC\\Controllers\\AnimeController.cs",
+              "RelativeDocumentMoniker": "Lab250206_EmptyMVC\\Controllers\\AnimeController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\01\\Lab250206_EmptyMVC\\Lab250206_EmptyMVC\\Controllers\\AnimeController.cs",
+              "RelativeToolTip": "Lab250206_EmptyMVC\\Controllers\\AnimeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-06T02:50:29.032Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ok.css",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\01\\Lab250206_EmptyMVC\\Lab250206_EmptyMVC\\wwwroot\\css\\ok.css",
+              "RelativeDocumentMoniker": "Lab250206_EmptyMVC\\wwwroot\\css\\ok.css",
+              "ToolTip": "C:\\Users\\User\\Desktop\\01\\Lab250206_EmptyMVC\\Lab250206_EmptyMVC\\wwwroot\\css\\ok.css",
+              "RelativeToolTip": "Lab250206_EmptyMVC\\wwwroot\\css\\ok.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2025-02-07T02:30:41.2Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

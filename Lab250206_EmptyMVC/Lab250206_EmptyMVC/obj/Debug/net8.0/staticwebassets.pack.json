@@ -1,0 +1,33 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\User\\Desktop\\01\\Lab250206_EmptyMVC\\Lab250206_EmptyMVC\\wwwroot\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\Desktop\\01\\Lab250206_EmptyMVC\\Lab250206_EmptyMVC\\wwwroot\\css\\ok.css",
+      "PackagePath": "staticwebassets\\css\\ok.css"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Lab250206_EmptyMVC.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Lab250206_EmptyMVC.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.Lab250206_EmptyMVC.props",
+      "PackagePath": "build\\Lab250206_EmptyMVC.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.Lab250206_EmptyMVC.props",
+      "PackagePath": "buildMultiTargeting\\Lab250206_EmptyMVC.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.Lab250206_EmptyMVC.props",
+      "PackagePath": "buildTransitive\\Lab250206_EmptyMVC.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
