@@ -36,6 +36,6 @@ app.UseSession();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=TestData}/{action=Index}/{id?}");
+    pattern: "{controller=Razor}/{action=Index}/{id?}");
 
 app.Run();

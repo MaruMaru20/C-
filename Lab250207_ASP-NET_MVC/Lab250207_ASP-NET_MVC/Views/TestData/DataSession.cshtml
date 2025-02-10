@@ -3,7 +3,7 @@
 *@
 @{
 }
-<p>test</p>
+<p>FN</p>
 <a href="\testdata\index"> index </a>
  |
 <a href="\testdata\datacat"> cat </a>
@@ -11,3 +11,12 @@
 <a href="\testdata\datadog"> dog </a>
 	|　
 <a href="\testdata\datasession"> datasession </a>
+
+<hr />
+
+<div class="text-center">
+	<p>
+		<b>Name:</b> @Context.Session.GetString("_Name");
+		<b>Age:</b> @Context.Session.GetInt32("_Age").ToString()
+	</p>
+</div>

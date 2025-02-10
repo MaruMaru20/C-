@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Desktop\\01\\Lab250207_ASP-NET_MVC\\Lab250207_ASP-NET_MVC\\Lab250207_ASP-NET_MVC.csproj",
+      "projectUniqueName": "E:\\C#\\C#\\Lab250207_ASP-NET_MVC\\Lab250207_ASP-NET_MVC\\Lab250207_ASP-NET_MVC.csproj",
       "projectName": "Lab250207_ASP-NET_MVC",
-      "projectPath": "C:\\Users\\User\\Desktop\\01\\Lab250207_ASP-NET_MVC\\Lab250207_ASP-NET_MVC\\Lab250207_ASP-NET_MVC.csproj",
+      "projectPath": "E:\\C#\\C#\\Lab250207_ASP-NET_MVC\\Lab250207_ASP-NET_MVC\\Lab250207_ASP-NET_MVC.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\Desktop\\01\\Lab250207_ASP-NET_MVC\\Lab250207_ASP-NET_MVC\\obj\\",
+      "outputPath": "E:\\C#\\C#\\Lab250207_ASP-NET_MVC\\Lab250207_ASP-NET_MVC\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

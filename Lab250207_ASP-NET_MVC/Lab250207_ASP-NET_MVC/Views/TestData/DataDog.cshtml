@@ -17,3 +17,12 @@
 <p>  看資料 H2 ：@TempData.Peek("H2")  </p>
 <hr />
 
+<hr />
+
+<div class="text-center">
+	<p>
+		<b>Name:</b> @Context.Session.GetString("_Name");
+		<b>Age:</b> @Context.Session.GetInt32("_Age").ToString()
+	</p>
+</div>
+

@@ -1,0 +1,120 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<label>Name:</label>
+<input type="text" placeholder="@ViewBag.Name" content="width=device-width" /> </text>
+<br></br>
+<label>Gender..:</label>
+<input type="radio" name="Gender" id="boy"><label for="boy">@ViewData["MMM"]</label></input>
+<input type="radio"name="Gender" id="girl" checked="@true">@TempData["FFF"]</input>
+<br>
+
+<br>
+<p>@Context.Session.GetString("_Where")</p>
+<select >
+    <option value="TPE">@ViewBag.where</option>
+    <option value="TCH">@ViewBag.where2</option>
+    <option value="KS">@ViewBag.where3</option>
+
+</select>
+
+
+<hr>
+<hr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h1>Razor測試</h1>
+@{
+    int mm = DateTime.Now.Month;
+}
+
+<h1>@DateTime.Now.Year 　　　　　@mm</h1>
+
+
+<div class="text-center">
+    <p>
+        <b>Name:</b> @Context.Session.GetString("_Name");
+        <b>Age:</b> @Context.Session.GetInt32("_Age").ToString()
+    </p>
+</div>
+<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Embedding a backslash in a string -->
+@{
+    var myFilePath = $@"C:\MyFolder\{mm}";
+}
+<p>The path is: @myFilePath</p>
+
+<hr />
+<input type="checkbox" checked="@true" name="true" />
+<input type="checkbox" checked="@false" name="false" />
+<input type="checkbox" checked="@null" name="null" />
+<hr />
+
+@{
+    var result = "";
+    if (true)
+    {
+        result = "This page was posted using the Submit button.";
+    }
+    else
+    {
+        result = "This was the first request for this page.";
+    }
+}
+
+@{
+    int GenericMethod = 6;
+}
+
+
+<p>Last week this time: @(DateTime.Now - TimeSpan.FromDays(7))</p>
+
+<hr />
+@{
+    string[] people = { "A", "B"};
+}
+@for (var i = 0; i < people.Length; i++)
+{
+    var person = people[i];
+    <text>Name: @person</text>
+}
