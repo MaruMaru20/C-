@@ -1,0 +1,59 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<h1>Himawari</h1>
+
+
+
+<a href="\TestPartialView\index">index</a>
+<br />
+<a href="\TestPartialView\Shiro">Shiro </a>
+<br />
+<a href="\TestPartialView\Nanako">Nanako </a>
+<br />
+<a href="\TestPartialView\Himawari">Himawari</a>
+<br />
+
+<hr />
+@await Html.PartialAsync("_MyPartialView", ViewData["1234"])
+<div class="container">
+    <div class="row">
+        @for (int i = 0; i < 10; i++)
+        {
+            @await Html.PartialAsync("_Partialboots")
+        }
+
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>
+<br></br>

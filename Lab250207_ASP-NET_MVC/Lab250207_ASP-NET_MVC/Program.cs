@@ -1,3 +1,7 @@
+using System;
+using Microsoft.AspNetCore.Mvc;
+using static System.Collections.Specialized.BitVector32;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -34,8 +38,51 @@ app.UseAuthorization();
 app.UseSession();
 
 
+//app.MapControllerRoute(
+//    name: "default",
+//    pattern: "{controller=Route}/{action=index}/{id?}/{context?}");
+//app.MapControllerRoute(
+//                name: "MouseA",
+//                pattern: "{controller=Route}/{action=Mouse}/{id?}"
+//                );
+
+
+//app.MapControllerRoute(
+//    name: "MouseB",
+//    pattern: "{controller=Route}/{action=Mouse}/{apple?}/{bee?}"
+//    );
+//app.MapControllerRoute(
+//    name: "prod",
+//    pattern: "{Action = prod}/{id?}",
+//    defaults: new { controller = "Route" }
+////    controller = prod
+////id = DCAY5I - A900BGV95
+//);
+//app.MapControllerRoute(
+//    name: "Rabbit",
+//    pattern: "{id?}",
+//    defaults: new { controller = "Route", action = "Rabbit" }
+//);
+
+//app.MapControllerRoute(
+//    name: "Rabbit",
+//    pattern: "{id?}",
+//    defaults: new { controller = "Route", action = "Rabbit" },
+//    constraints: new { id = "^09\\d{8}$" }
+//);
+//^09\d{8}$
+
+//app.MapControllerRoute(
+//    name: "TestView",
+//    pattern: "{controller=TestView}/{action=index}"
+
+
+//);
 app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Razor}/{action=Index}/{id?}");
+    name: "JSON",
+    pattern: "{controller=JSON}/{action=Index}"
+
+
+);
 
 app.Run();

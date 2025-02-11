@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "mLGWyJNxBnO0NSuM/Ge3gjhlFGWNec9lxXM2935iRDw=",
+  "Hash": "XKSr/HOSS4hO7j080mPbg5O43kygQeUap3kFLzFK98A=",
   "Source": "Lab250207_ASP-NET_MVC",
   "BasePath": "_content/Lab250207_ASP-NET_MVC",
   "Mode": "Default",
@@ -57,6 +57,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "E:\\C#\\C#\\Lab250207_ASP-NET_MVC\\Lab250207_ASP-NET_MVC\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\Lab250207_ASP-NET_MVC.bundle.scp.css"
+    },
+    {
+      "Identity": "E:\\C#\\C#\\Lab250207_ASP-NET_MVC\\Lab250207_ASP-NET_MVC\\wwwroot\\css\\001.jpg",
+      "SourceId": "Lab250207_ASP-NET_MVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\C#\\C#\\Lab250207_ASP-NET_MVC\\Lab250207_ASP-NET_MVC\\wwwroot\\",
+      "BasePath": "_content/Lab250207_ASP-NET_MVC",
+      "RelativePath": "css/001#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "fsx54x6jsw",
+      "Integrity": "sf1gRruY6+v8FTN+0wYCoEy2gjFl8t28MenId5Vfp28=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\001.jpg"
     },
     {
       "Identity": "E:\\C#\\C#\\Lab250207_ASP-NET_MVC\\Lab250207_ASP-NET_MVC\\wwwroot\\css\\site.css",
@@ -1320,6 +1341,88 @@
     }
   ],
   "Endpoints": [
+    {
+      "Route": "css/001.fsx54x6jsw.jpg",
+      "AssetFile": "E:\\C#\\C#\\Lab250207_ASP-NET_MVC\\Lab250207_ASP-NET_MVC\\wwwroot\\css\\001.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "20008"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"sf1gRruY6+v8FTN+0wYCoEy2gjFl8t28MenId5Vfp28=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 30 Dec 2024 06:44:38 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "fsx54x6jsw"
+        },
+        {
+          "Name": "label",
+          "Value": "css/001.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-sf1gRruY6+v8FTN+0wYCoEy2gjFl8t28MenId5Vfp28="
+        }
+      ]
+    },
+    {
+      "Route": "css/001.jpg",
+      "AssetFile": "E:\\C#\\C#\\Lab250207_ASP-NET_MVC\\Lab250207_ASP-NET_MVC\\wwwroot\\css\\001.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "20008"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"sf1gRruY6+v8FTN+0wYCoEy2gjFl8t28MenId5Vfp28=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 30 Dec 2024 06:44:38 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-sf1gRruY6+v8FTN+0wYCoEy2gjFl8t28MenId5Vfp28="
+        }
+      ]
+    },
     {
       "Route": "css/site.c2tiyv64ts.css",
       "AssetFile": "E:\\C#\\C#\\Lab250207_ASP-NET_MVC\\Lab250207_ASP-NET_MVC\\wwwroot\\css\\site.css",
