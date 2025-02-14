@@ -3,6 +3,9 @@
   "WorkspaceRootPath": "E:\\C#\\C#\\Lab241230_ADO\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{00000000-0000-0000-0000-000000000000}|\u003CSolution\u003E|Day5||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{06EEBF62-3CCB-4812-9A37-42F94BB372C7}|Day5\\Day5.csproj|e:\\c#\\c#\\lab241230_ado\\day5\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{06EEBF62-3CCB-4812-9A37-42F94BB372C7}|Day5\\Day5.csproj|solutionrelative:day5\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -39,6 +42,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{975BA154-1571-48CF-B1C1-DF2A9F56E3DB}|Login\\Login.csproj|E:\\C#\\C#\\Lab241230_ADO\\login\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{975BA154-1571-48CF-B1C1-DF2A9F56E3DB}|Login\\Login.csproj|solutionrelative:login\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{06EEBF62-3CCB-4812-9A37-42F94BB372C7}|Day5\\Day5.csproj|e:\\c#\\c#\\lab241230_ado\\day5\\properties\\settings.settings||{6D2695F9-5365-4A78-89ED-F205C045BFE6}",
+      "RelativeMoniker": "D:0:0:{06EEBF62-3CCB-4812-9A37-42F94BB372C7}|Day5\\Day5.csproj|solutionrelative:day5\\properties\\settings.settings||{6D2695F9-5365-4A78-89ED-F205C045BFE6}"
     }
   ],
   "DocumentGroupContainers": [
@@ -57,18 +64,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "MyDB.cs",
-              "DocumentMoniker": "E:\\C#\\C#\\Lab241230_ADO\\Day6\\MyDB.cs",
-              "RelativeDocumentMoniker": "Day6\\MyDB.cs",
-              "ToolTip": "E:\\C#\\C#\\Lab241230_ADO\\Day6\\MyDB.cs",
-              "RelativeToolTip": "Day6\\MyDB.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAA2wCAAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-09T13:06:18.215Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "Form1.cs [\u8A2D\u8A08]",
               "DocumentMoniker": "E:\\C#\\C#\\Lab241230_ADO\\Day5\\Form1.cs",
               "RelativeDocumentMoniker": "Day5\\Form1.cs",
@@ -80,7 +75,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Form3_pages.cs [\u8A2D\u8A08]",
               "DocumentMoniker": "E:\\C#\\C#\\Lab241230_ADO\\Day3\\Form3_pages.cs",
               "RelativeDocumentMoniker": "Day3\\Form3_pages.cs",
@@ -91,7 +86,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Day3",
               "DocumentMoniker": "E:\\C#\\C#\\Lab241230_ADO\\Day3\\Day3.csproj",
               "RelativeDocumentMoniker": "Day3\\Day3.csproj",
@@ -102,7 +97,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Day6",
               "DocumentMoniker": "E:\\C#\\C#\\Lab241230_ADO\\Day6\\Day6.csproj",
               "RelativeDocumentMoniker": "Day6\\Day6.csproj",
@@ -113,7 +108,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Form1.cs",
               "DocumentMoniker": "E:\\C#\\C#\\Lab241230_ADO\\Day5\\Form1.cs",
               "RelativeDocumentMoniker": "Day5\\Form1.cs",
@@ -126,7 +121,31 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
+              "Title": "Day5",
+              "DocumentMoniker": "E:\\C#\\C#\\Lab241230_ADO\\Day5\\Day5.csproj",
+              "RelativeDocumentMoniker": "Day5\\Day5.csproj",
+              "ToolTip": "E:\\C#\\C#\\Lab241230_ADO\\Day5\\Day5.csproj",
+              "RelativeToolTip": "Day5\\Day5.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-02-14T06:10:33.286Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MyDB.cs",
+              "DocumentMoniker": "E:\\C#\\C#\\Lab241230_ADO\\Day6\\MyDB.cs",
+              "RelativeDocumentMoniker": "Day6\\MyDB.cs",
+              "ToolTip": "E:\\C#\\C#\\Lab241230_ADO\\Day6\\MyDB.cs",
+              "RelativeToolTip": "Day6\\MyDB.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAA2wCAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-09T13:06:18.215Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "Form1.cs [\u8A2D\u8A08]",
               "DocumentMoniker": "E:\\C#\\C#\\Lab241230_ADO\\Day6\\Form1.cs",
               "RelativeDocumentMoniker": "Day6\\Form1.cs",
@@ -137,7 +156,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "Form1.cs [\u8A2D\u8A08]",
               "DocumentMoniker": "E:\\C#\\C#\\Lab241230_ADO\\Login\\Form1.cs",
               "RelativeDocumentMoniker": "Login\\Form1.cs",
@@ -148,7 +167,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "Form1.cs",
               "DocumentMoniker": "E:\\C#\\C#\\Lab241230_ADO\\Login\\Form1.cs",
               "RelativeDocumentMoniker": "Login\\Form1.cs",
@@ -160,7 +179,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "Form1.cs",
               "DocumentMoniker": "E:\\C#\\C#\\Lab241230_ADO\\Day6\\Form1.cs",
               "RelativeDocumentMoniker": "Day6\\Form1.cs",

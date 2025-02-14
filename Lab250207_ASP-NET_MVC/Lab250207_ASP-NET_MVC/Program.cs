@@ -78,6 +78,7 @@ app.UseSession();
 
 
 //);
+
 app.MapControllerRoute(
     name: "JSON",
     pattern: "{controller=JSON}/{action=Index}"

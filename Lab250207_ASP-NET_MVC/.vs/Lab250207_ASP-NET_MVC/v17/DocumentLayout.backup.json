@@ -7,16 +7,24 @@
       "RelativeMoniker": "D:0:0:{C80C8039-E8B5-40D1-B013-8BFCF0FC5B19}|Lab250207_ASP-NET_MVC\\Lab250207_ASP-NET_MVC.csproj|solutionrelative:lab250207_asp-net_mvc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{C80C8039-E8B5-40D1-B013-8BFCF0FC5B19}|Lab250207_ASP-NET_MVC\\Lab250207_ASP-NET_MVC.csproj|e:\\c#\\c#\\lab250207_asp-net_mvc\\lab250207_asp-net_mvc\\controllers\\testdatacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C80C8039-E8B5-40D1-B013-8BFCF0FC5B19}|Lab250207_ASP-NET_MVC\\Lab250207_ASP-NET_MVC.csproj|solutionrelative:lab250207_asp-net_mvc\\controllers\\testdatacontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C80C8039-E8B5-40D1-B013-8BFCF0FC5B19}|Lab250207_ASP-NET_MVC\\Lab250207_ASP-NET_MVC.csproj|e:\\c#\\c#\\lab250207_asp-net_mvc\\lab250207_asp-net_mvc\\views\\testview\\pikachu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{C80C8039-E8B5-40D1-B013-8BFCF0FC5B19}|Lab250207_ASP-NET_MVC\\Lab250207_ASP-NET_MVC.csproj|solutionrelative:lab250207_asp-net_mvc\\views\\testview\\pikachu.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C80C8039-E8B5-40D1-B013-8BFCF0FC5B19}|Lab250207_ASP-NET_MVC\\Lab250207_ASP-NET_MVC.csproj|e:\\c#\\c#\\lab250207_asp-net_mvc\\lab250207_asp-net_mvc\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C80C8039-E8B5-40D1-B013-8BFCF0FC5B19}|Lab250207_ASP-NET_MVC\\Lab250207_ASP-NET_MVC.csproj|solutionrelative:lab250207_asp-net_mvc\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C80C8039-E8B5-40D1-B013-8BFCF0FC5B19}|Lab250207_ASP-NET_MVC\\Lab250207_ASP-NET_MVC.csproj|e:\\c#\\c#\\lab250207_asp-net_mvc\\lab250207_asp-net_mvc\\views\\json\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{C80C8039-E8B5-40D1-B013-8BFCF0FC5B19}|Lab250207_ASP-NET_MVC\\Lab250207_ASP-NET_MVC.csproj|solutionrelative:lab250207_asp-net_mvc\\views\\json\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C80C8039-E8B5-40D1-B013-8BFCF0FC5B19}|Lab250207_ASP-NET_MVC\\Lab250207_ASP-NET_MVC.csproj|e:\\c#\\c#\\lab250207_asp-net_mvc\\lab250207_asp-net_mvc\\controllers\\jsoncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C80C8039-E8B5-40D1-B013-8BFCF0FC5B19}|Lab250207_ASP-NET_MVC\\Lab250207_ASP-NET_MVC.csproj|solutionrelative:lab250207_asp-net_mvc\\controllers\\jsoncontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C80C8039-E8B5-40D1-B013-8BFCF0FC5B19}|Lab250207_ASP-NET_MVC\\Lab250207_ASP-NET_MVC.csproj|e:\\c#\\c#\\lab250207_asp-net_mvc\\lab250207_asp-net_mvc\\views\\shared\\_mypartialview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{C80C8039-E8B5-40D1-B013-8BFCF0FC5B19}|Lab250207_ASP-NET_MVC\\Lab250207_ASP-NET_MVC.csproj|solutionrelative:lab250207_asp-net_mvc\\views\\shared\\_mypartialview.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -35,38 +43,25 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "_MyPartialView.cshtml",
-              "DocumentMoniker": "E:\\C#\\C#\\Lab250207_ASP-NET_MVC\\Lab250207_ASP-NET_MVC\\Views\\Shared\\_MyPartialView.cshtml",
-              "RelativeDocumentMoniker": "Lab250207_ASP-NET_MVC\\Views\\Shared\\_MyPartialView.cshtml",
-              "ToolTip": "E:\\C#\\C#\\Lab250207_ASP-NET_MVC\\Lab250207_ASP-NET_MVC\\Views\\Shared\\_MyPartialView.cshtml",
-              "RelativeToolTip": "Lab250207_ASP-NET_MVC\\Views\\Shared\\_MyPartialView.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-02-12T07:15:18.376Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "JSONController.cs",
-              "DocumentMoniker": "E:\\C#\\C#\\Lab250207_ASP-NET_MVC\\Lab250207_ASP-NET_MVC\\Controllers\\JSONController.cs",
-              "RelativeDocumentMoniker": "Lab250207_ASP-NET_MVC\\Controllers\\JSONController.cs",
-              "ToolTip": "E:\\C#\\C#\\Lab250207_ASP-NET_MVC\\Lab250207_ASP-NET_MVC\\Controllers\\JSONController.cs",
-              "RelativeToolTip": "Lab250207_ASP-NET_MVC\\Controllers\\JSONController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAiAAAAAAAAAA==",
+              "Title": "Product.cs",
+              "DocumentMoniker": "E:\\C#\\C#\\Lab250207_ASP-NET_MVC\\Lab250207_ASP-NET_MVC\\Product.cs",
+              "RelativeDocumentMoniker": "Lab250207_ASP-NET_MVC\\Product.cs",
+              "ToolTip": "E:\\C#\\C#\\Lab250207_ASP-NET_MVC\\Lab250207_ASP-NET_MVC\\Product.cs",
+              "RelativeToolTip": "Lab250207_ASP-NET_MVC\\Product.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-12T08:13:54.556Z",
+              "WhenOpened": "2025-02-13T03:13:56.016Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Index.cshtml",
               "DocumentMoniker": "E:\\C#\\C#\\Lab250207_ASP-NET_MVC\\Lab250207_ASP-NET_MVC\\Views\\JSON\\Index.cshtml",
               "RelativeDocumentMoniker": "Lab250207_ASP-NET_MVC\\Views\\JSON\\Index.cshtml",
               "ToolTip": "E:\\C#\\C#\\Lab250207_ASP-NET_MVC\\Lab250207_ASP-NET_MVC\\Views\\JSON\\Index.cshtml",
               "RelativeToolTip": "Lab250207_ASP-NET_MVC\\Views\\JSON\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACcAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-02-12T08:14:19.599Z",
               "EditorCaption": ""
@@ -79,9 +74,47 @@
               "RelativeDocumentMoniker": "Lab250207_ASP-NET_MVC\\Program.cs",
               "ToolTip": "E:\\C#\\C#\\Lab250207_ASP-NET_MVC\\Lab250207_ASP-NET_MVC\\Program.cs",
               "RelativeToolTip": "Lab250207_ASP-NET_MVC\\Program.cs",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAAAFgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAAAFAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-12T08:14:21.924Z",
+              "WhenOpened": "2025-02-13T02:38:58.832Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "JSONController.cs",
+              "DocumentMoniker": "E:\\C#\\C#\\Lab250207_ASP-NET_MVC\\Lab250207_ASP-NET_MVC\\Controllers\\JSONController.cs",
+              "RelativeDocumentMoniker": "Lab250207_ASP-NET_MVC\\Controllers\\JSONController.cs",
+              "ToolTip": "E:\\C#\\C#\\Lab250207_ASP-NET_MVC\\Lab250207_ASP-NET_MVC\\Controllers\\JSONController.cs",
+              "RelativeToolTip": "Lab250207_ASP-NET_MVC\\Controllers\\JSONController.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAYwBMAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-12T08:13:54.556Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Pikachu.cshtml",
+              "DocumentMoniker": "E:\\C#\\C#\\Lab250207_ASP-NET_MVC\\Lab250207_ASP-NET_MVC\\Views\\TestView\\Pikachu.cshtml",
+              "RelativeDocumentMoniker": "Lab250207_ASP-NET_MVC\\Views\\TestView\\Pikachu.cshtml",
+              "ToolTip": "E:\\C#\\C#\\Lab250207_ASP-NET_MVC\\Lab250207_ASP-NET_MVC\\Views\\TestView\\Pikachu.cshtml",
+              "RelativeToolTip": "Lab250207_ASP-NET_MVC\\Views\\TestView\\Pikachu.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-14T03:25:14.346Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TestDataController.cs",
+              "DocumentMoniker": "E:\\C#\\C#\\Lab250207_ASP-NET_MVC\\Lab250207_ASP-NET_MVC\\Controllers\\TestDataController.cs",
+              "RelativeDocumentMoniker": "Lab250207_ASP-NET_MVC\\Controllers\\TestDataController.cs",
+              "ToolTip": "E:\\C#\\C#\\Lab250207_ASP-NET_MVC\\Lab250207_ASP-NET_MVC\\Controllers\\TestDataController.cs",
+              "RelativeToolTip": "Lab250207_ASP-NET_MVC\\Controllers\\TestDataController.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-14T03:25:21.051Z",
               "EditorCaption": ""
             }
           ]

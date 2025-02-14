@@ -4,3 +4,55 @@
 @{
 }
 <h1>JSON</h1>
+
+
+<div id="conn"></div>
+<div id="xxx"></div>
+<button onclick="app()">TEST!</button>
+<button onclick="bpp()">TEST!</button>
+<script>
+	function app()
+	{
+		$.ajax({
+			url:"https://reqres.in/api/users?page=2",
+			type: "GET",
+			success: function (apple) {
+				console.log(apple);
+				console.log(apple.data);
+
+				for (let k = 0; k < apple.data.length; k++) {
+					console.log(`當K的值為${k}`);
+					console.log(apple.data[k]);
+					let imgUrl = apple.data[k].avatar;
+
+				
+				let imgElement = `<img src="${imgUrl}" alt="User Avatar" ">`;
+				$("#conn").append(imgElement);
+				}
+			}
+		})
+
+	}
+
+	function bpp()
+	{
+				
+	$.ajax({
+		url:"https://localhost:7126/JSON/ProductData",
+		type: "GET",
+		success: function (bpple)
+		{
+			console.log(bpple[0].pName);
+			console.log(bpple.pName);
+			document.getElementById('xxx').innerHTML = `<p> 水果:${bpple[0].pName}`;
+			document.getElementById('xxx').innerHTML += `<p> 水果:${bpple[1].pName}`;
+
+				
+
+		}
+	})
+
+	
+	}
+</script>
+
