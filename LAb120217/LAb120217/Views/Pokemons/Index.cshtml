@@ -1,0 +1,61 @@
+﻿@model IEnumerable<LAb120217.Models.Pokemon>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index @ViewBag.A</h1>
+<hr />
+<form action="/Pokemons/Index" method="post">
+    <label></label>
+    <input type="text" name="cool" />
+    <input type="submit" />
+</form>
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PokeName)
+            </th>
+            <th>
+               
+                 @Html.DisplayNameFor(model => model.PokeImage)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Memo)
+                
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PokeDate)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PokeName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PokeImage)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Memo)
+                    <button>test</button>
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PokeDate)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.PokeId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.PokeId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.PokeId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

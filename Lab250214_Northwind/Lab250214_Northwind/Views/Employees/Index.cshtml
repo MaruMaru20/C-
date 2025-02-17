@@ -1,0 +1,24 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model List<Employee>
+@{
+    // foreach (Employee item in ViewBag.Demo)
+    // {
+    //     <p>@item.EmployeeID</p>
+    //     <p>@item.LastName</p>
+    //     <p>@item.FirstName</p>
+    // }
+
+
+}
+<h1>123</h1>
+<div>
+    @for (int i = 0; i < ViewBag.Demo.Count; i++)
+    {
+        @: name: @ViewBag.Demo[i].EmployeeID
+        @: name: @ViewBag.Demo[i].LastName
+        @: name: @ViewBag.Demo[i].FirstName
+        <br>
+    }
+</div>

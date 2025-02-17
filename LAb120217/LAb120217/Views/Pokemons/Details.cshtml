@@ -1,0 +1,42 @@
+﻿@model LAb120217.Models.Pokemon
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Pokemon</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PokeName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PokeName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PokeImage)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PokeImage)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Memo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Memo)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PokeDate)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PokeDate)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model?.PokeId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

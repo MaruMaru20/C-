@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<div id="xxx"></div>
+<button onclick="ShowStudent()">TEST!</button>
+<script>
+		function ShowStudent()
+	{
+
+	$.ajax({
+		url:"https://localhost:7138//Home/Student",
+		type: "GET",
+		success: function (bpple)
+		{
+			console.log(bpple[0].);
+			console.log(bpple.pName);
+			document.getElementById('xxx').innerHTML = `<p> 水果:${bpple[0].pName}`;
+			document.getElementById('xxx').innerHTML += `<p> 水果:${bpple[1].pName}`;
+
+
+
+		}
+	})
+
+</script>

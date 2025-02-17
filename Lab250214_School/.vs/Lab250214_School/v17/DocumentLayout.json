@@ -1,0 +1,74 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\User\\Desktop\\01\\Lab250214_School\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{47CEC4D6-79B9-4C3C-92F7-E2FA23F7D477}|Lab250214_School\\Lab250214_School.csproj|c:\\users\\user\\desktop\\01\\lab250214_school\\lab250214_school\\views\\school\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{47CEC4D6-79B9-4C3C-92F7-E2FA23F7D477}|Lab250214_School\\Lab250214_School.csproj|solutionrelative:lab250214_school\\views\\school\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47CEC4D6-79B9-4C3C-92F7-E2FA23F7D477}|Lab250214_School\\Lab250214_School.csproj|c:\\users\\user\\desktop\\01\\lab250214_school\\lab250214_school\\controllers\\schoolcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47CEC4D6-79B9-4C3C-92F7-E2FA23F7D477}|Lab250214_School\\Lab250214_School.csproj|solutionrelative:lab250214_school\\controllers\\schoolcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47CEC4D6-79B9-4C3C-92F7-E2FA23F7D477}|Lab250214_School\\Lab250214_School.csproj|c:\\users\\user\\desktop\\01\\lab250214_school\\lab250214_school\\views\\school\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{47CEC4D6-79B9-4C3C-92F7-E2FA23F7D477}|Lab250214_School\\Lab250214_School.csproj|solutionrelative:lab250214_school\\views\\school\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SchoolController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\01\\Lab250214_School\\Lab250214_School\\Controllers\\SchoolController.cs",
+              "RelativeDocumentMoniker": "Lab250214_School\\Controllers\\SchoolController.cs",
+              "ToolTip": "C:\\Users\\User\\Desktop\\01\\Lab250214_School\\Lab250214_School\\Controllers\\SchoolController.cs",
+              "RelativeToolTip": "Lab250214_School\\Controllers\\SchoolController.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAmwCAAAABOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-14T01:07:12.834Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\01\\Lab250214_School\\Lab250214_School\\Views\\School\\Index.cshtml",
+              "RelativeDocumentMoniker": "Lab250214_School\\Views\\School\\Index.cshtml",
+              "ToolTip": "C:\\Users\\User\\Desktop\\01\\Lab250214_School\\Lab250214_School\\Views\\School\\Index.cshtml",
+              "RelativeToolTip": "Lab250214_School\\Views\\School\\Index.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAADkAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-14T01:16:57.519Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\Desktop\\01\\Lab250214_School\\Lab250214_School\\Views\\School\\Edit.cshtml",
+              "RelativeDocumentMoniker": "Lab250214_School\\Views\\School\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\User\\Desktop\\01\\Lab250214_School\\Lab250214_School\\Views\\School\\Edit.cshtml",
+              "RelativeToolTip": "Lab250214_School\\Views\\School\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-02-14T04:03:27.151Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

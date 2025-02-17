@@ -1,0 +1,1800 @@
+███████  2025/02/14  14:05
+
+
+** 請建立一個新的專案 Lab250214_Northwind
+
+目標：希望連線到 Northwind 資料庫，帶出員工姓名及電話
+
+
+1. 在專案底下找到 appsettings.json 加入連線字串 
+
+    * 資料庫連線資訊每台電腦不同，請依照自己電腦的設定填入
+
+    "ConnectionStrings": {
+        "NorthwindConnstring": "Server=你的主機;Database=你的資料庫;Integrated Security=驗證模式;Trusted_Connection=True;TrustServerCertificate=True;User ID=你的帳號;Password=你的密碼"
+    }
+
+
+
+2. 在 Models 資料夾加入一個類別 Employee.cs
+    內容根據  Northwind 資料庫 的 Employees 資料表進行設計
+
+
+
+3. 在 Models 資料夾加入一個類別 MyDbContext.cs
+    並貼上底下程式碼
+
+    public class MyDbContext : DbContext
+    {
+        public MyDbContext(DbContextOptions<MyDbContext> options): base(options)
+        {
+        }
+
+        public DbSet<Employee> Employees { get; set; }
+    }
+
+
+    加入後若有錯誤訊息，請將滑鼠移動到紅色波浪處> 顯示可能的修正
+    根據提示，安裝套件 Microsoft.EntityFrameworkCore
+
+
+
+4. 在方案總管找到 Program.cs 並設置資料庫連線相關服務
+
+    builder.Services.AddDbContext<MyDbContext>(
+        options => options.UseSqlServer(builder.Configuration.GetConnectionString("NorthwindConnstring")));
+
+    builder.Services.AddControllersWithViews();
+
+
+    加入後若有錯誤訊息，透過套件管理員安裝套件
+        Microsoft.EntityFrameworkCore.SqlServer
+
+    套件管理員位於：工具 → NuGet套件管理員 → 管理方案的NuGet套件
+
+
+    重新檢視錯誤訊息，會改為提示 
+        using Microsoft.EntityFrameworkCore;
+
+
+
+
+5. 在 Controllers 底下建立 EmployeesController.cs
+    並貼上底下程式碼
+
+    public class EmployeesController : Controller
+    {
+        private readonly MyDbContext _context;
+
+        public EmployeesController(MyDbContext context)
+        {
+            _context = context;
+        }
+
+        public async Task<IActionResult> Index()
+        {
+            return View();
+        }
+    }
+
+
+
+6. 建立一個 Index頁面，並測試專案可以正常運作
+
+
+
+7. 修改 動作結果 Index ， 取得 Northwind 資料庫的 員工資料表
+    ViewBag.Demo = await _context.Employees.ToListAsync();
+
+
+8. 請修改 Index頁面 ， 顯示 ViewBag 的資料
+
+
+9. 請完成目標，將姓名和電話帶到 Index頁面 呈現出來
+    * 九個員工 就會有九筆紀錄在畫面上
+
+
+
+███████  2025/02/14  13:52
+
+    補充資料：
+        . <form  asp-action="Edit">
+        . <input asp-for="sID" .... >
+        . <span  asp-validation-for="sID" ... >
+
+        內建的 ASP.NET Core 標記協助程式
+        請參考「表單標記協助程式」、 「輸入標籤協助程式」
+        https://learn.microsoft.com/zh-tw/aspnet/core/mvc/views/tag-helpers/built-in/?view=aspnetcore-8.0#built-in-aspnet-core-tag-helpers
+
+
+███████  2025/02/14  11:35
+
+    線索1: 
+        在 Views\Edit.cshtml 第一行看見 
+            @model Lab250214_School.Models.Student
+            -> @model 表示 controller 在回傳的時候 有放值
+
+        在 Controllers\SchoolController.cs 嘗試回傳一個學生
+            Student s1 = new Student();
+            s1.sName = "胖丁";
+            s1.Math = 60;
+            return View(s1);
+
+    線索2: 
+        在 Views\Index.cshtml 
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) 
+            -> 專案運行後，透過瀏覽器檢查，發現這是一個 <a> 
+
+        照著微軟的規畫走，嘗試調整 @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) 
+        捨棄微軟的規畫，註解微軟寫的程式碼 @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) 
+            -> 班上大部分都採取「照著微軟的規畫走」
+            
+        -> <a href="~/School/Edit">編輯巴</a>
+
+        -> 全部的學生都走向 https://localhost:7168/School/Edit
+    
+        -> 我想要在網址列上面放一些資料輔助我去識別
+            (pchome 的商品代號。)
+            -> https://localhost:7168/School/Edit/1
+            -> https://localhost:7168/School/Edit?bee=1
+
+        -> 確認可以收到在URL上面的資料
+
+
+███████  2025/02/14  10:39
+
+20. 產生編輯畫面
+
+    練習： 
+        1. Views\School資料夾> 右鍵> 加入> 檢視> Razor 檢視
+            檢視名稱：預設為View，修改為 Edit
+            範本：請挑選下拉選單的Edit
+            模型類別：請在下拉選單中找到 Student
+            點選新增，然後等待一段時間
+
+        2. 將專案運行起來，並且觀察結果
+
+
+    問題1： 為什麼看不到 Edit頁面？
+    答案1： 
+
+    問題2： 如何修正程式碼？ 我期望能夠看到 Edit頁面
+    答案2：
+    
+    -----------------------------------------------------------------
+
+    問題3：希望 Index頁面 點選 Edit 後，可以成功開啟 Edit頁面
+        並且在 Edit頁面 畫面有指定學生的資料
+
+        例如，如果我點選 Pikachu 那一個資料列的 Edit，
+        開起來的 Edit頁面 會帶入 Pikachu 原本的資料
+        請問該調整哪些地方，才能夠達到需求？
+
+
+    答案：
+
+
+███████  2025/02/14  10:30
+
+    補充資料：關於 [Display(Name = "XXX")]
+
+        DisplayAttribute.Name 屬性
+        https://learn.microsoft.com/zh-tw/dotnet/api/system.componentmodel.dataannotations.displayattribute.name?view=net-8.0
+
+        實體屬性
+        https://learn.microsoft.com/zh-tw/ef/core/modeling/entity-properties?tabs=data-annotations%2Cwithout-nrt 
+
+        將驗證規則新增至電影模型
+        https://learn.microsoft.com/zh-tw/aspnet/core/tutorials/first-mvc-app/validation?view=aspnetcore-8.0#add-validation-rules-to-the-movie-model
+
+    * 專題是否會想要在「類別屬性的上方放置[屬性]」?
+
+
+███████  2025/02/14  09:00
+
+** 請建立一個新的專案 Lab250214_School
+
+10. 前情提要： 
+    1. 請根據底下說明，將學生的資料呈現在畫面上
+    2. 如果成功了，請針對看不懂的程式碼進行 修改/刪除/搜尋 
+    3. 如果成功了，畫面覺得怪怪的，想針對網頁進行美化，可自由自在操作
+
+    ** 最後一次模擬資料庫加入後專案的變化 => 然後我們就要去連資料庫了
+
+
+練習：
+    1. 在 Models 資料夾> 右鍵> 加入類別 > Student.cs
+        將底下的內容複製貼上到 Student.cs
+        public class Student{
+            [Display(Name = "學號")]
+            public int sID { get; set; }
+            [Display(Name = "姓名")]
+            public string sName { get; set; }
+            [Display(Name = "國文")]
+            public int Chinese { get; set; }
+            [Display(Name = "英文")]
+            public int English { get; set; }
+            [Display(Name = "數學")]
+            public int Math { get; set; }
+            [Display(Name = "總分")]
+            public int Total { get; set; }
+        }
+    
+    2. Controllers資料夾> 右鍵> 加入> 
+        控制器 > MVC 控制器-空白> SchoolController.cs ， 加入學生資料
+        List<Student> students = new List<Student>
+        {
+            new Student{sID=1, sName="Pikachu", Chinese=100, English=90, Math=60},
+            new Student{sID=12, sName="Mary", Chinese=92, English=82, Math=60},
+            new Student{sID=23, sName="Lisa", Chinese=98, English=91, Math=94},
+            new Student{sID=34, sName="John", Chinese=63, English=85, Math=55},
+            new Student{sID=45, sName="David", Chinese=59, English=77, Math=82}
+        };
+
+
+    3. 修改動作結果Index ， 將上述學生資料放在呼叫View函式內
+
+
+    4. 函式名稱> 右鍵> 新增檢視> Razor 檢視> 加入
+        檢視名稱：預設為Index
+        範本：請挑選下拉選單最後一個 List
+        模型類別：請在下拉選單中找到 Student
+        點選新增，然後等待一段時間
+
+
+    5. 將專案運行起來，並且觀察結果
+
+
+
+    █████████████████████████████████████████████████████████
+
+
+
+    問題1：首頁跑出來的總成績為 0 為什麼？
+    答案1：
+
+    問題2：總成績 應不應該 記錄在資料庫中？
+    答案2：
+
+    問題3：假設總成績沒有記錄在資料庫，該如何顯示總成績？
+    答案3：
+
+    -----------------------------------------------------------------
+
+    問題4：Student.cs 的每一個屬性上方有 [Display(Name = "XXX")] ，能不能修改？
+    答案4：
+
+    問題5：若修改成功，影響到哪一個畫面？
+    答案5：
+
+    問題6：若刪除 [Display(Name = "XXX")] ， 專案是否會無法運行？
+    答案6：
+
+    問題7：若刪除後專案可以正常運行，是否刪除比較好？
+    答案7：
+
+    -----------------------------------------------------------------
+
+
+
+███████  2025/02/13  11:35
+
+    問題： 上述程式碼僅由 HTML 和 JavaScript組成
+        請建立一個 demo.html ， 並且將上述的程式碼貼到 demo.html；
+
+        透過 LiveServer 開啟 demo.html 
+        並嘗試操作 demo.html ， 觀察網頁執行結果
+
+    答案：
+
+
+    -----------------------------------------
+
+
+30. 啟用跨源請求
+
+    補充資料：
+    在 ASP.NET Core 中啟用跨源請求 (CORS)
+    https://learn.microsoft.com/zh-tw/aspnet/core/security/cors?view=aspnetcore-8.0
+
+    練習： 請根據官方範例的提示進行我們專案程式碼的擴充；
+        目標：允許|設定 「他人」可以來「我們」的專案拿資料。
+
+    步驟：
+
+
+
+███████  2025/02/13  11:05
+
+20. 取得自己的資料放在自己的網頁上
+
+    練習：  
+        1. 上述的例子，是前往「其他伺服器」獲得資料
+        2. 請改寫上述範例，改為取得剛剛自己的伺服器的 ProductData 資料
+
+
+    步驟：
+
+    -----------------------------------------
+
+
+███████  2025/02/13  10:15
+
+** 請依照自己的想法創建新專案或者沿用舊專案
+
+10. 沿用先前的 Controller TestJSON
+
+    或自行新增一個專案，裡面需要包含 Controller TestJSON 以及一個 Index檢視頁面
+
+
+
+15. 討論 CORS + 取得測試資料並且渲染在畫面上
+    練習： 
+        1. 在 Index 檢視加入 一個 <button> 
+        2. 這個 <button> 綁定一個事件
+        3. 當按鈕點擊後，執行這段程式碼
+            console.log("----我正在測試----");
+            console.log($.ajax);
+            console.log("----我正在測試----");
+        4. 檢查主控台，確認是否有對應的訊息
+
+
+    問題： 根據觀察 $.ajax 是一個怎麼樣的資料型態？
+    答案： 
+
+    -----------------------------------------
+
+    練習： 將底下程式碼取代掉原本按鈕點擊後的程式碼
+            $.ajax({
+                url:"https://reqres.in/api/users?page=2",
+                type: "GET",
+                success: function (apple) {
+                    console.log(apple);
+                    console.log(apple.data);
+                    for (let k = 0; k < apple.data.length; k++) {
+                        console.log(`當K的值為${k}`);
+                        console.log(apple.data[k]);
+                    }
+                }
+            })
+            
+    問題1： 上述程式碼中， apple 的資料型態是什麼？
+    答案1：
+
+    問題2： 上述程式碼中， apple.data 的資料型態是什麼？
+    答案2：
+
+    問題3： 上述程式碼中， 為什麼迴圈跑了6次？
+    答案3：
+
+    問題4： 上述程式碼中， apple.data[k] 的資料型態是什麼？
+    答案4：
+
+    問題5： 延續問題4，請在結構中找出圖片在哪個屬性底下
+    答案5：
+
+    問題6： 我該如何取得所有使用者的照片，並顯示在畫面上？
+    答案6：
+        
+
+
+███████  2025/02/13  09:25
+
+25. 修正中文亂碼問題
+
+
+    練習：請參考下列文件，改正中文亂碼問題
+
+        文件一：如何使用 自訂字元編碼 System.Text.Json
+        https://learn.microsoft.com/zh-tw/dotnet/standard/serialization/system-text-json/character-encoding
+
+        文件二：UnicodeRanges 類別
+        https://learn.microsoft.com/zh-tw/dotnet/api/system.text.unicode.unicoderanges?view=net-8.0
+
+        文件三：設定 System.Text.Json 型格式器
+        https://learn.microsoft.com/zh-tw/aspnet/core/web-api/advanced/formatting?view=aspnetcore-8.0#configure-systemtextjson-based-formatters-2
+
+
+-----------------------------------------  
+
+    將設定放在 controller 步驟： (文件一、文件二)
+
+
+-----------------------------------------  
+    
+    將設定放在 program.cs 步驟： (文件三)
+
+
+-----------------------------------------
+
+    問題：放到 program.cs 的好處是什麼？
+    答案：
+    
+
+███████  2025/02/13  09:10
+
+20. 討論 JSON 
+
+    練習：
+        1. 在 controller TestJSON 建立 函式 ProductData()
+        2. 設計函式 ProductData 的回傳型態為 JsonResult
+
+        3. 建立一個 Product 類別，裡面有兩個屬性，產品名稱跟產品價格
+        4. 在 函式 ProductData 建立產品清單並且回傳產品清單
+            => 目前中文有亂碼，所以請先用英文進行測試
+
+
+
+
+███████  2025/02/12  16:15
+** 請依照自己的想法創建新專案或者沿用舊專案
+
+
+10. 討論 回傳 JSON 格式資料
+
+    練習： 建立 Controller TestJSON 和 Index檢視頁面，並確認專案可以正常運行
+
+
+-------------
+
+
+20. 討論 JSON 
+
+    練習：
+        1. 在 controller TestJSON 建立 函式 ProductData()
+        2. 設計函式 ProductData 的回傳型態為 JsonResult
+
+        3. 建立一個 Product 類別，裡面有兩個屬性，產品名稱跟產品價格
+        4. 在 函式 ProductData 建立產品清單並且回傳產品清單
+            => 目前中文有亂碼，所以請先用英文進行測試
+
+    ** 2/12 下課前只說了一下大概，並沒有實作。
+
+
+███████  2025/02/12  14:55
+
+    問題： @await Html.PartialAsync("你所命名的檢視頁面名稱") 是否可以呼叫執行兩次以上？
+    答案：
+
+
+    問題： @RenderBody() 是否可以呼叫執行兩次以上？
+    答案： 
+
+    ---------------------------------------------------------------------
+
+
+    練習：  新增一個部分檢視 ， 
+            並將部分檢視的頁面放入 bootstrap 的 component card ；
+            在 Shiro 、 Nanako 、 Himawari 任何一個頁面測試引用
+            -> 運行專案，觀察程式碼運作結果or錯誤的訊息
+
+
+    步驟1： 新增一個部分檢視
+    步驟2： 並將部分檢視的頁面放入 bootstrap 的 component card
+    步驟3： 在 Shiro 、 Nanako 、 Himawari 任何一個頁面測試引用
+    步驟4： 運行專案，觀察程式碼運作結果or錯誤的訊息
+        => 圖片壞了。
+
+    步驟5： 圖片放哪裡?
+    步驟6： 圖片如何引用? -> css如何引用?
+
+
+
+    專題決策：是否要將畫面分割得這麼細，請小組討論決定，或由負責人自行決定。
+
+
+    ---------------------------------------------------------------------
+
+███████  2025/02/12  13:47
+
+
+50. 關於部分檢視
+
+    問題： 請開啟台灣高鐵網頁
+        1. 觀察 導覽列 是否應該要放在 Layout？
+        2. 觀察 右下角|右邊中間 的區塊有三個小功能
+            這樣的功能是否應該要放在 Layout？
+
+    練習：
+        1. 建立 Controller TestPartialView 和檢視頁面
+        
+        2. 在 Controller 底下建立三個 Action 和對應的檢視頁面
+            Shiro 、 Nanako 、 Himawari
+        
+        3. 在 Controller 傳遞測試資料 到 上述三個檢視頁面
+
+        4. 確認專案 和 三個檢視頁面 皆可正常運行
+
+
+    -----------------------------------------
+
+
+    練習：
+        1. 請依照底下這份文件，建立一個 部分檢視
+            https://learn.microsoft.com/zh-tw/aspnet/core/mvc/views/partial?view=aspnetcore-8.0#partial-view-discovery
+
+        2. 在 Shiro 、 Nanako 、 Himawari 這幾個檢視頁面，引用 部分檢視
+
+
+    步驟1： 根據官方文件， 部分檢視 會建立在 /Views/Shared 底下
+
+    步驟2： 官方文件沒有說明，但，「當專案需要一個檔案的時候」..
+
+            Shared 資料夾右鍵> 加入> 新增項目> 
+    
+            搜尋 Razor > (選到6個經過刪去法..) 點選 Razor檢視>
+
+            命名 老師喜歡 _Partial 開頭
+
+            _PartialApple.cshtml 的檔案
+
+    步驟3： 
+        官方的測試cshtml -> Views/Articles/Read.cshtml
+          我的測試cshtml -> Views/TestPartialView/Himawari.cshtml
+
+
+    步驟4： 
+        官方的: 
+            @await Html.PartialAsync("_PartialName", customViewData)
+            @await Html.PartialAsync("_PartialName", model)
+            @await Html.PartialAsync("_AuthorPartial", Model.AuthorName)
+
+        我的:
+            @await Html.PartialAsync("_PartialApple", 我想丟ViewData但我剛剛還沒寫 )
+            -> 我想要用 ViewData
+            -> controller 放 ViewData  view 取得 ViewData
+
+    步驟5： 
+        TestPartialViewController 找到 動作結果 Himawari 
+        ViewData["asdf"] = "情人節";
+
+
+    步驟6： 
+        Views/TestPartialView/Himawari.cshtml
+        <p>測試資料B: @ViewData["asdf"]</p>
+
+
+    步驟7：
+        回頭修改步驟4
+        @await Html.PartialAsync("_PartialApple", @ViewData["asdf"] )
+
+
+    步驟8：
+        /Views/Shared/_PartialApple.cshtml
+        -> 因為這個檔案什麼都沒有，所以完全測試不了
+        -> <h1>部分檢視-協力旺</h1>
+
+    
+    步驟9：
+        /Views/Shared/_PartialApple.cshtml
+        <h1>部分檢視-@ViewData["asdf"]</h1>
+        
+
+███████  2025/02/12  13:30
+
+    問題：這一段練習，未來可以應用的情境是什麼？
+
+    答案：
+
+    -----------------------------------------
+
+    延伸閱讀
+
+        使用屬性
+        https://docs.microsoft.com/zh-tw/dotnet/csharp/programming-guide/concepts/attributes/#using-attributes
+
+        Purpose of ActionName
+        https://stackoverflow.com/questions/6536559/purpose-of-actionname
+
+        Most Useful Attributes
+        https://stackoverflow.com/questions/144833/most-useful-attributes
+
+
+
+███████  2025/02/12  11:50
+
+35. 讓路由中 action 的名稱與方法名稱不同
+
+    練習： 
+        1. 請試著在 「宣告函式 Pikachu 的上方」 添加這一行程式碼
+            [ActionName("ILoveOnePiece")]
+
+        2. 啟動專案並且嘗試連結到 Pikachu 頁面，
+            如果無法獲得，請根據提示進行修正 ； 
+            如果沒有提示，請推敲看看為什麼
+
+    
+    答案：
+
+
+███████  2025/02/12  11:30
+
+30. 呼叫其他頁面時需要注意的事項
+
+    練習： 透過 controller 傳遞資料給 Olaf 檢視頁面
+        確檢視頁面可正常運行
+
+    -----------------------------------------
+
+
+    【請依序修改 函式 **Elsa** 的回傳方式，並說明為什麼得到這樣的結果】
+
+    測試URL：https://localhost:XXXX/TestView/Elsa
+
+    練習： return View("Olaf");
+    執行結果： 
+
+    練習： return Redirect("~/TestView/Olaf");
+    執行結果： 
+
+    練習： return RedirectToAction("Olaf", "TestView");
+    執行結果： 
+
+    練習： return RedirectToAction(controllerName:"TestView", actionName:"Olaf");
+    執行結果： 
+
+
+    ★ 取得檢視頁面的時候，需不需要「經過?|執行?」該檢視頁面的 action ?
+
+
+
+███████  2025/02/12  11:10
+
+20. 呼叫其他頁面
+
+    練習： 
+        1. 根據剛剛的觀察發現，我們可以傳入字串
+        2. 在 Bob 的回傳中 放入  "Pikachu" 
+        3. 啟動專案並且嘗試連結到 Bob 頁面
+        
+    執行結果： 
+    
+    -----------------------------------------
+    
+    問題：這一段練習，未來可以應用的情境是什麼？
+    答案：
+
+
+    -----------------------------------------
+
+    問題： 是否能在回傳時，使用指定路徑字串？ 
+    答案：
+        
+    
+
+███████  2025/02/12  10:40
+
+** 請依照自己的想法創建新專案或者沿用舊專案
+
+10. 討論 View
+
+    練習： 
+        1. 建立 Controller TestView 
+        2. 在 Controller 底下建立五個 Action 和對應的檢視頁面
+            Index 、 Bob  、 Olaf 、 Elsa 、 Pikachu 
+        3. 確認專案 和 五個檢視頁面 皆可正常運行
+
+-----------------------------------------
+
+15. 關於 呼叫 View函式
+
+    問題： 呼叫 View 函式時，有幾種傳入資料的方式？
+    答案： 
+
+    -----------------------------------------
+
+    練習： 根據第四種呼叫方式 View(string? viewName, object? model)
+    
+        1. 在動作結果 Index 的回傳值改為 return View("Index", "皮卡丘");
+
+        2. 在 Index 檢視頁面 加入底下程式碼
+            @model string
+
+            @Model
+
+        3. 將專案運行起來，並且觀察結果
+            如果順利執行，Index 檢視頁面 將會看到皮卡丘三個字
+
+
+███████  2025/02/12  10:10
+
+    問題：我想限制使用者輸入必須為台灣的手機，該如何約束 ？
+        app.MapControllerRoute(
+            name:"Rabbit",
+            pattern:"{id?}",
+            defaults:new { controller = "TestRoute", action = "Rabbit" },
+            constraints:new { id = "台灣的手機正規/正則表達式" }
+        );
+
+    答案：
+
+    -----------------------------------------
+    
+    其他：自己負責的草稿中是否有需要「使用者輸入資料」的地方？
+        若有，趁這段時間把對應的正規/正則表達式準備起來
+
+    
+    相關資料：
+        JavaScript RegExp Reference
+        https://www.w3schools.com/jsref/jsref_obj_regexp.asp
+
+        規則運算式語言 - 快速參考
+        https://learn.microsoft.com/zh-tw/dotnet/standard/base-types/regular-expression-language-quick-reference
+
+
+
+
+
+
+███████  2025/02/12  09:35
+
+
+    問題：https://24h.pchome.com.tw/prod/DCAY5I-A900BGV95
+            這是剛剛看到的 pchome URL
+            請根據自己的想法分析定義 URL 上面的資訊，例如
+            「prod」 指的是 controller 還是 action 還是 id
+            「DCAY5I-A900BGV95」 指的是 controller 還是 action 還是 id
+
+            並根據自己的想法，重新規劃 program.cs
+
+            * 希望自己的url看起來跟pchome很像，例如
+              https://localhost:XXXX/prod/DCAY5I-A900BGV95
+
+            * 希望頁面可以取得url上面的資訊
+              prod
+              DCAY5I-A900BGV95
+
+    答案：
+        
+        prod 可以當 controller -> 建立該 controller
+        
+        prod 也可以當 action   -> 建立該 action
+
+        => 不管是哪一個 program.cs 都要調整。
+
+
+    
+    -----------------------------------------
+
+
+
+███████  2025/02/12  09:13
+
+30. 路由 pattern
+
+    前情提要： program.cs 裡面的 pattern 目前包含了 controller 和 action
+        所以導致我們在測試時，都需要輸入 controller 和 action
+        但 pchome 的網址怎麼好像不太一樣，我們該怎麼做到這件事？
+        https://24h.pchome.com.tw/prod/DCAY5I-A900BGV95
+        https://24h.pchome.com.tw/prod/DSAR0S-A900F7PCX
+
+
+    練習： 
+        1. TestRoute 底下建立一個 函式 Rabbit() 和對應的檢視頁面
+
+        2. 修改 programs.cs
+            
+            *** 先將所有呼叫 MapControllerRoute方法的程式碼註解，方便測試 ***
+
+            app.MapControllerRoute(
+                name:"Rabbit",
+                pattern:"{id?}",
+                defaults:new { controller= "TestRoute", action= "Rabbit" }
+            );
+
+        3. 運行專案，確認 Rabbit頁面可以正常開啟
+
+    -----------------------------------------
+
+
+    問題：URL輸入 https://localhost:XXXX/TestRoute/Rabbit 的時候，
+        為什麼無法看到 Rabbit頁面了？
+
+    答案：
+
+    -----------------------------------------
+
+    問題：若 URL 為 https://localhost:XXXX/5566 ，
+        Rabbit頁面要如何獲得 5566 ？
+
+    答案：
+
+    -----------------------------------------
+
+
+
+███████  2025/02/11  11:40
+
+20. 在url上出現 ? 符號代表什麼意思
+
+    https://24h.pchome.com.tw/activity/super-brand-week?banner=new24_c1
+
+    練習： 
+        1. TestRoute 底下建立一個 回傳字串的函式 Duck()
+        
+        2. 貼上底下程式碼
+            string x = HttpContext.Request.Query["cat"];
+            string y = HttpContext.Request.Query["dog"];
+            return "唐老鴨" + x + "和" + y;
+
+        3. 運行專案
+        
+        4. 測試 URL 
+            https://localhost:XXXX/TestRoute/Duck?cat=999&dog=false
+        
+        5. 觀察並說明結果
+        
+
+    答案：
+
+
+
+███████  2025/02/11  11:05
+
+
+15. 討論執行順序
+
+    練習： 
+        1. 為了測試底下的程式碼，請將原本在 Programs.cs 的現存所有路由註解掉
+
+        2. 在 Programs.cs 貼上底下程式碼
+            app.MapControllerRoute(
+                name:"MouseA",
+                pattern:"{controller=TestRoute}/{action=Mouse}/{id?}"
+                );
+
+            app.MapControllerRoute(
+                name:"MouseB",
+                pattern:"{controller=TestRoute}/{action=Mouse}/{apple?}/{bee?}"
+                );    
+
+        3. 將原本的 方法Mouse 更換為底下程式碼
+            public string Mouse(string apple, string bee, string id)
+            {
+                string data = $"米老鼠 id:{id}  apple:{apple}  bee:{bee}";
+                return data;
+            }
+
+    ----------------------------------------------------------------------------------
+    問題： 若URL 為 http://localhost:XXXX/TestRoute/Mouse/123
+        則回傳字串中的 id 、 apple 、 bee 三者各自會呈現什麼？ 
+
+    答案：
+     
+    -----------------------------------------
+    問題： 若URL 為 http://localhost:XXXX/TestRoute/Mouse/123/456
+        則回傳字串中的 id 、 apple 、 bee 三者各自會呈現什麼？ 
+
+    答案：
+
+    -----------------------------------------
+    問題： 如果把 MouseA 和 MouseB 執行的順序交換，是否還會得到相同的測試結果？
+
+    答案：
+         
+    -----------------------------------------
+    問題： 為什麼 id 、 apple 、 bee 這三者不能同時有值？
+
+    答案：
+
+ 
+
+延伸閱讀
+    慣例路由名稱 
+    https://learn.microsoft.com/zh-tw/aspnet/core/mvc/controllers/routing?view=aspnetcore-8.0&preserve-view=true#conventional-route-names
+
+
+
+███████  2025/02/11  10:25
+
+** 請依照自己的想法創建新專案或者沿用舊專案
+
+10. 討論 Router 語法
+
+    練習： 建立 Controller TestRoute 和 Index檢視頁面，並確認專案可以正常運行
+
+    -----------------------------------------
+
+    練習： 在這個 controller 底下建立一個 回傳字串 的方法 Mouse()
+        如何確認 Mouse 是否可以正常運行?
+
+    答案：
+        
+    -----------------------------------------
+
+    練習： 
+        1. 修改 回傳字串的方法 Mouse()，添加傳入的參數 Mouse(string id)
+        2. 將 參數id 變成回傳值的一部分
+        3. 測試 方法Mouse 是否可以正常運行?
+        4. 如果在 url 的末端加上 /888 ，畫面會看到什麼? 為什麼?
+
+    步驟：
+
+    -----------------------------------------
+
+    問題： 上一個練習中的 參數id
+        id 是不是關鍵字? 能不能修改?
+
+    答案： 
+
+    -----------------------------------------
+
+    問題： 我們看到的 聯合新聞url 有很多數字，我們該怎麼規劃接收?
+        聯合新聞url: https://udn.com/news/cate/2/6649
+
+    答案： 
+
+
+
+███████  2025/02/11  09:40
+
+    練習： 會員編輯畫面2.0
+
+        1. 專案右鍵> 加入類別> Member.cs
+            ** 先放在專案底下沒關係，隔幾天就會跑到 Models 資料夾底下了
+
+        2. 撰寫 Member.cs 
+            2-1 對照剛剛的會員資料，建立三個屬性
+            2-2 假設使用者可以在new的時候傳入三個屬性值
+                這個檔案應該要對應做什麼設置？
+
+        3. 修改 controller
+            3-1 new 出一個會員，設定會員資料 
+            3-2 目前 controller 有會員資料
+                請放到檢視頁面呈現
+
+
+    步驟：
+
+
+
+
+
+
+███████  2025/02/10  15:30
+
+20. 目標： 透過 *假的* 會員編輯頁面，練習資料傳遞和Razor語法
+
+    練習： 會員編輯畫面1.0
+    
+        1. 已經知道，controller 可以傳遞值給 view
+
+        2. 假設，你有一個功能是會員「編輯」個人資料的頁面
+
+        3. 假設，會員資料只有三個欄位「姓名、性別、居住地」
+
+        4. 假設，姓名使用 text 、 性別使用 radio 、 居住地使用 select
+
+        5. 還沒有連到資料庫，請從 controller 傳遞測試資料到 view
+            並且在頁面上對應的標籤中顯示資料
+            -> 姓名的部分，在  2025/02/07  13:45  的
+             「練習：請將 字串皮卡丘 放入到 p 標籤的內容中」已經討論過
+             
+    步驟：
+
+
+
+
+
+███████  2025/02/10  10:42
+
+
+** 請依照自己的想法創建新專案或者沿用舊專案
+
+10. 討論 Razor 語法
+
+    練習： 建立 Controller TestRazor 和 Index檢視頁面，並確認專案可以正常運行
+
+    -----------------------------------------
+
+
+    練習： 閱讀底下文件的第一部分「前 8 大程式設計秘訣」
+        有幾點是你已經知道，而且完全不需要進行測試？
+
+        使用 Razor 語法 (C#) ASP.NET Web 程式設計簡介 (ASP.NET 4.x )
+        https://learn.microsoft.com/zh-tw/aspnet/web-pages/overview/getting-started/introducing-razor-syntax-c
+
+
+    答案： 
+    
+
+    問題： 第七點 您的大部分程式碼都牽涉到物件
+        1. 看起來有一份範例程式碼，應該要放在哪裡執行？
+        2. 如果無法執行，會是什麼原因？
+
+    答案： 
+
+    問題： 第八點 您可以撰寫程式碼來做出決策
+        1. 看起來有一份範例程式碼，應該要放在哪裡執行？
+        2. 如果無法執行，會是什麼原因？
+
+    答案： 
+
+    -----------------------------------------
+
+    練習： 這一份文件一共有 16 個段落，請閱讀前 6 個段落
+        過程中將自己不熟悉的程式碼貼到程式裡面跑跑看
+
+        ASP.NET Core 的 Razor 語法參考 (ASP.NET Core)
+        https://learn.microsoft.com/zh-tw/aspnet/core/mvc/views/razor?view=aspnetcore-8.0
+
+
+
+
+
+
+
+███████  2025/02/10  10:00
+
+    練習：請根據底下文件的說明，練習將對應的程式碼加入到專案中
+        設定工作階段狀態 AddSession 的呼叫
+        https://learn.microsoft.com/zh-tw/aspnet/core/fundamentals/app-state?view=aspnetcore-8.0#configure-session-state
+
+    步驟： 
+
+    -----------------------------------------
+
+        
+    練習： 請根據底下文件的說明，練習將對應的程式碼加入到專案中
+        設定和取得工作階段值
+        https://learn.microsoft.com/zh-tw/aspnet/core/fundamentals/app-state?view=aspnetcore-8.0#set-and-get-session-values
+
+        在 ASP.NET Core 中存取 HttpContext
+        https://learn.microsoft.com/zh-tw/aspnet/core/fundamentals/http-context?view=aspnetcore-8.0#access-httpcontext-from-a-razor-view-in-mvc
+
+
+    步驟： 
+
+    -----------------------------------------
+
+    練習： 目前 TestData 底下共有四個檢視頁面，
+            請測試這四個檢視頁面是否都可以獲得 @Context.Session 底下的資料
+
+    步驟：
+
+
+
+
+
+
+████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+
+
+
+
+
+
+
+
+
+███████  2025/02/07  16:00
+
+
+35. 資料是否可以跨頁面存取 - 討論二
+
+    練習： 
+        1. 在 TestData 新增檢視 DataSession
+        2. 確認專案可以開啟
+
+    答案：
+
+    -----------------------------------------
+
+
+███████  2025/02/07  15:10
+
+30. 資料是否可以跨頁面存取 - 討論一
+
+    練習： 
+        1. 在 TestData 新增檢視 DataCat 和 DataDog
+        2. 建立超連結，讓三個檢視頁面可以彼此跳轉
+
+    答案：
+    
+    -----------------------------------------
+
+    練習：
+        3. 將 Index頁面 的部份內容複製貼上到 DataCat頁面 或者 DataDog頁面
+        4. 請運行專案，觀察結果
+
+    答案： 
+    
+    -----------------------------------------
+
+    問題： 為什麼只有 Index頁面 可以看到資料？
+
+    答案： ViewBag.A2 只有給 Index頁面
+    
+    -----------------------------------------
+
+    練習：
+        1. 動作結果 Index 加入
+            TempData["D1"] = "端午節";
+            TempData["D2"] = "萬聖節";
+            
+        2. 在 Index頁面 、 DataCat頁面 、 DataDog頁面 加入
+            <hr />
+            <p>  看資料 D1 ：@TempData["D1"]       </p>
+            <p>  看資料 D2 ：@TempData.Peek("D2")  </p>
+            <hr />
+
+        3. 請運行專案，開啟 Index頁面 後，點選 DataCat頁面 或者 DataDog頁面
+            並觀察結果
+
+    小結論:
+    
+
+
+
+
+
+
+
+
+███████  2025/02/07  14:15
+
+25. 比較傳遞資料的差異
+
+    練習：
+        1. 繼續使用剛剛的 Controller TestData
+
+        2. 在 return View() 前面， 加入底下程式碼 
+            ViewData["A3"] = "兒童節";
+            TempData["A4"] = "中秋節";
+
+        3. 在 Index.cshtml 裡面，取得資料並且顯示在畫面上
+
+    -----------------------------------------
+
+
+    練習： 
+        1. 繼續使用剛剛的 Controller TestData
+
+        2. 比照上述步驟，使用 ViewBag 、 ViewData 、TempData 
+            等三種方式，將數字資料傳遞到檢視頁面
+        
+        3. 試著在檢視(View)頁面(cshtml)進行數字加法運算，觀察結果
+
+    運行結果：
+
+
+    -----------------------------------------
+
+
+    練習： 
+        1. 想要在畫面上呈現 日期/時間日期 ， 的標籤是哪些？
+
+        2. 從 controller 帶出 日期/時間日期 放到檢視頁面顯示
+
+    答案：
+
+
+
+
+
+
+
+███████  2025/02/07  13:45
+
+10. 請創造一個 ASP.NET MVC專案
+    專案名稱：依照自己上課習慣的方式即可
+
+
+20. 資料傳遞 - 開始討論 controller 到 view 之間的資料傳遞
+
+
+    練習： 
+        1. 建立一個 Controller TestData 
+
+        2. 配合 Controller 產生 Index 頁面，並確認專案可以正常運行
+
+        3. 在 Index 的 return View() 前面， 加入底下程式碼
+            ViewBag.A1 = 7;
+            ViewBag.A2 = "皮卡丘";
+
+        4. Index.cshtml ，加入底下程式碼
+            @ViewBag.A1
+            <hr />
+            @ViewBag.A2
+            <hr />
+         
+        -> 運行專案，觀察程式碼運作結果or錯誤的訊息
+
+    -----------------------------------------
+    
+    練習：請將 字串皮卡丘 放入到 p 標籤的內容中
+    答案：
+    
+
+    練習：請將 字串皮卡丘 放入到 input 標籤對應的屬性中
+    答案：
+    
+    -----------------------------------------
+
+    練習： 目前看見數字7和字串皮卡丘
+        我希望寫一個迴圈，使用數字7和字串皮卡丘
+
+    答案：
+
+
+
+
+
+
+███████  2025/02/07  13:30
+
+    * 延伸閱讀：如果覺得排版是弱點，可以採用 bootstrap 或者 其他線上的templete ，協助你完成大專。
+        
+        . bootstrap examples：https://getbootstrap.com/docs/5.3/examples/
+
+        . bootstrap template：https://startbootstrap.com/?showPro=false&showVue=false&showAngular=false
+
+
+  ----------------------------------------- 
+
+(這個漏掉了，原本放在 ? 可為 Null 的值類型 的後面)
+38. 是否會想要在 Shared資料夾底下再新增子資料夾
+    將 Layout 分資料夾存放？
+
+    練習：在 Shared資料夾底下加入 Apple資料夾，
+        將 _LayoutYellow.cshtml 拖曳到 Apple資料夾存放
+
+
+    問題：當 Layout 檔案位置改變後，先前可以跑的程式碼要如何配合修正？
+
+    答案:
+    
+    
+
+
+
+███████  2025/02/07  11:16
+
+    練習：請從這裡取得 bootstrap 的不同版本
+        https://www.w3schools.com/bootstrap/bootstrap_ver.asp
+
+
+    練習：增加兩顆按鈕，並且嘗試自己寫css改變按鈕背景底色
+
+    練習：引用 bootstrap 4.x 版本，並且將剛剛的兩顆按鈕 套用 .btn 
+    
+
+-----------------------------------------
+
+    問題：為什麼套用 bootstrap 4.x 版本 後，按鈕顏色不見了？
+    
+    答案： 
+
+-----------------------------------------
+    
+    問題：為什麼 bootstrap 4.x 版本的 .text-right 可以在 <p> 發生作用，但是 <span> 不行
+
+    答案：
+    
+-----------------------------------------
+
+
+    問題：bootstrap 4.x 版本的 .text-right 有效果，但是
+          bootstrap 5.x 版本的 .text-right 就沒有效果了
+          在 bootstrap 5.x 應該要如何修改？
+   
+    答案： class="text-end"
+
+    
+
+
+
+
+███████  2025/02/07  10:25
+
+** 請依照自己的想法創建新專案或者沿用先前的空白專案
+
+
+10. 新增 wwwroot 資料夾
+
+    練習：專案右鍵> 加入> 新增資料夾> wwwroot> 成功後資料夾的圖示會變成地球的圖示
+          wwwroot地球右鍵> 加入> 新增資料夾> css
+          css資料夾右鍵> 新增項目> 樣式表> 
+          預設名稱為 StyleSheet.css 建議 不要用預設名稱，任意命名 (稍後比較好找)
+
+          例如: MyCat.css
+
+
+    練習：在樣式表添加內容 -> 在 Layout 試著引用自己寫的樣式表
+
+
+-----------------------------------------
+
+
+20. 大專是否會使用 bootstrap ？
+
+    ** 注意，底下問題可能有陷阱
+
+
+    練習：下載 bootstrap 並且加入 bootstrap.css 到專案中
+        ** 上課時，把 bootstrap.css 放在 css 資料夾底下就好 (比較好找)
+        ** 大專時，各組可以有不一樣的想法和存放位置
+
+
+    問題：使用 bootstrap 寫的 table 範例，直接貼上不能用，為什麼
+        https://getbootstrap.com/docs/5.3/content/tables/
+
+    答案：
+
+
+
+
+
+
+
+
+
+███████  2025/02/07  09:24
+
+35. 是否會覺得每一個頁面都要指定Layout有點麻煩？
+
+    練習：觀察底下程式碼，他們應該要被寫在哪裡?
+            以及 如果程式碼執行成功，可能會看到什麼?
+
+        @ViewContext.RouteData.Values["controller"] 
+        @ViewContext.RouteData.Values["action"]
+
+
+    運行結果：透過 URL 觀察程式內容
+        https://localhost:xxxx/Anime/Index
+        https://localhost:xxxx/Anime/Pokemon
+        https://localhost:xxxx/Anime/Doraemon 
+
+
+    ---------------------------------------------------
+
+    練習：希望使用者呼叫小叮噹頁面就套用 _LayoutBlue.cshtml
+        神奇寶貝就套用 _LayoutYellow.cshtml
+        (不同的頁面套用不同的 Layout)
+
+    答案：
+
+    ---------------------------------------------------
+
+
+    討論：關於剛剛在寫程式碼的時候，如果有出現綠色波浪..
+
+    相關資料：
+        解決可為 Null 的警告
+        https://learn.microsoft.com/zh-tw/dotnet/csharp/language-reference/compiler-messages/nullable-warnings#possible-null-assigned-to-a-nonnullable-reference
+
+        ? 可為 Null 的值類型
+        https://learn.microsoft.com/zh-tw/dotnet/csharp/language-reference/builtin-types/nullable-value-types
+
+        ! (Null容許) 運算子
+        https://learn.microsoft.com/zh-tw/dotnet/csharp/language-reference/operators/null-forgiving
+
+
+
+    ---------------------------------------------------
+
+
+
+
+
+
+████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+
+
+
+███████  2025/02/06  11:25
+
+20. 如果大專有很多頁面的「版面/版型」相同，該如何處理？
+
+    練習：加入「版面/版型/母版/主板/公版」
+            * 後續的討論，我會以英文稱呼就叫做 Layout 。
+
+    步驟：
+        Views資料夾右鍵> 加入> 新增資料夾> Shared
+
+        Shared資料夾右鍵> 加入> 新增項目> Razor版面配置> 預設名稱是 _Layout.cshtml
+
+        為了稍後方便討論，請修改為 _LayoutYellow.cshtml
+
+        在 _LayoutYellow.cshtml 加入部分標籤
+
+        -> 運行專案，觀察程式碼運作結果or錯誤的訊息
+    
+    運行結果： 
+
+    ---------------------------------------------------
+
+    問題：_LayoutYellow.cshtml 明明有寫了一些內容 ， 但為什麼都沒有出現？
+
+    答案： _ViewStart.cshtml
+    
+    ---------------------------------------------------
+
+    練習：觀察 _ViewStart.cshtml
+            寫了一段 @{ Layout = "_Layout"; }
+            該怎麼說明這段程式碼?
+    答案：
+    
+    ---------------------------------------------------
+
+    練習：透過 URL 確認各個頁面都可以正常開啟
+
+        https://localhost:XXXX/Anime/Index
+        https://localhost:XXXX/Anime/Pokemon
+        https://localhost:XXXX/Anime/Doraemon
+
+
+    問題："假設" Pokemon.cshtml 不想要套用 _LayoutYellow
+            該如何修改？
+
+    答案：
+
+    ---------------------------------------------------
+
+
+30. 大專題是否需要一個以上的「Layout」？
+
+    舉例:
+        這裡套用分類Layout：https://24h.pchome.com.tw/sign/outdoor
+        這裡套用商品Layout：https://24h.pchome.com.tw/prod/DAAG0S-A900H2PE7
+        要如何達到這樣的需求？
+
+
+    練習：請重複 20 的練習，再次加入一個 Layout
+            為了和上一個 Layout 有所區隔
+            這一個請命名為  _LayoutBlue.cshtml
+
+
+    問題：現在 Doraemon.cshtml 套用的是 _LayoutYellow.cshtml
+            (因為在 _ViewStart 設定了這件事)
+            如何在 Doraemon.cshtml 指定使用 _LayoutBlue.cshtml
+
+    答案：
+        
+    ---------------------------------------------------
+
+
+
+███████  2025/02/06  11:05
+
+15. 如果大專除了 Index.cshtml 頁面以外，還需要加入其他頁面，該如何操作?
+
+    練習：在 Anime資料夾右鍵> 加入> 檢視> Razor檢視-空白> Pokemon.cshtml
+            同樣在 Pokemon.cshtml 加入任意文字
+            (稍後透過這個標籤確認自己開啟的真的是 Pokemon.cshtml)
+
+
+    ---------------------------------------------------
+
+
+    問題：運行專案後，無法看見 Pokemon.cshtml 該如何修正？
+
+    答案:
+
+
+    ---------------------------------------------------
+
+    練習：若 Pokemon.cshtml 加入成功了，請比照同樣的方式，加入 Doraemon.cshtml
+
+    步驟：
+       
+
+
+███████  2025/02/06  10:35
+
+    練習：在專案中加入 Controllers 資料夾 
+    步驟：專案> 右鍵> 加入> 新增資料夾
+
+    練習：在 Controllers 資料夾底下 加入 AnimeController.cs 檔案
+    步驟：Controllers資料夾> 右鍵> 加入> 控制器> MVC控制器 - 空白
+        -> 運行專案，觀察程式碼運作結果or錯誤的訊息
+
+    運行結果： 
+
+    -----------------------------------------
+
+
+    練習：開啟 AnimeController.cs 並將滑鼠移動到 Index 名稱上方 右鍵> 新增檢視> Razor檢視 - 空白
+        預設的檔案名稱是 Index.cshtml，這裡保持預設值
+        並且在新增出來的檔案中加入一些標籤
+        -> 運行專案，觀察程式碼運作結果or錯誤的訊息
+
+
+    運行結果： Program.cs 的 app.MapControllerRoute() 必須要配合修改
+
+
+    *** 失敗的話請把這個專案丟掉，再重新建立一次空的專案 ***
+
+
+███████  2025/02/06  10:20
+
+** 提醒，使用空的專案是因為上課要複習，大專建議不要用空的。
+
+10. 建立一個「空的 ASP.NET Core」 專案
+    專案名稱為 Lab今天日期_EmptyMVC
+    陸續添加 MVC專案所需要的 資料夾和檔案
+
+
+    *! 透過下列練習理解 Controllers 與 Views 之間的關係
+        -> 要開始製作大專題的你，需要知道網頁要如何新增出來
+
+
+    練習：目前這個專案的 的 Program.cs 目前缺少了很多內容
+            請對照 MvcMovie專案 的 Program.cs 這個檔案
+            將缺少的內容加入
+            -> 運行專案，觀察程式碼運作結果or錯誤的訊息
+        
+    觀察結果：
+    運行結果： 找不到 localhost 網頁
+
+        60. 為什麼我的 ASP.NET MVC 專案跑不起來/不會動/看不到網頁
+            * Views 資料夾底下有沒有 cshtml 檔案
+    
+
+███████  2025/02/06  09:10
+
+    練習：請根據官方文件的說明，加入頁面專屬的css檔案
+        CSS 隔離
+        https://learn.microsoft.com/zh-tw/aspnet/core/razor-pages/?view=aspnetcore-8.0&tabs=visual-studio#css-isolation
+
+    步驟：
+        1. 針對頁面加入CSS檔案
+            Home資料夾> 右鍵> 加入> 新增項目
+            輸入 Index.cshtml.css 加入樣式表
+            (樣式表的命名預設為「StyleSheet.css」調整為「指定檔案.cshtml.css」)
+
+    -----------------------------------------
+
+
+    練習：目前可以寫css的地方有三個，請安排實驗，討論「css權重」在 ASP.NET MVC 架構底下是否有差異？
+        (「已知」的css權重，會不會因為 ASP.NET MVC 架構 而有所不同？)
+    
+    步驟：(請自行安排實驗)
+
+        目前可以寫css的地方有三個
+            1.  wwwroot資料夾       \wwwroot\css\site.css
+            2.  公版.cshtml.css     \Views\Shared\_Layout.cshtml.css
+            3.  頁面.cshtml.css     \Views\Home\Index.cshtml.css
+
+        實驗步驟
+            1. 確認要找哪個 標籤做實驗
+                <h3>
+
+            2. 確認要找哪個 CSS樣式 做實驗
+                color
+                background-color
+                font-size
+
+    -----------------------------------------
+
+
+70. 討論：CSS檔案跟JS檔案存放的路徑規劃
+    
+    方案A：我想要把所有的css放在css資料夾下面就好了
+            wwwroot\css\bootstrap.css
+            wwwroot\css\myapple.css
+            wwwroot\css\animation.css
+
+    方案B：我想要比照現有的 MVC專案結構
+            wwwroot\css\自己寫的
+            wwwroot\lib\套件名稱\套件的東西
+
+    方案C：以上皆非
+
+    * 請確認哪一種方式是「自己」覺得寫起來會比較順的
+
+
+
+
+████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+████████████████████████████████████████████████████████████████████████████████████████████████████████████████
+
+
+
+
+███████  2025/02/05  15:30
+
+
+50. 在 ASP.NET MVC 中的路徑引用
+
+    在程式碼中使用檔案和資料夾路徑
+    https://learn.microsoft.com/zh-tw/aspnet/web-pages/overview/getting-started/introducing-razor-syntax-c#working-with-file-and-folder-paths-in-code
+
+    閱讀官方文件的說明後，請嘗試填入底下空格
+
+    完整的URL：  https://localhost:7117/ (請將MVC專案運行起來以後的URL貼在這裡)
+    伺服器名稱： localhost:7117
+    虛擬路徑：   (?)
+    實體路徑：   D:\MvcMovie\MvcMovie\Views\Home\Index.cshtml
+
+
+
+    -----------------------------------------
+
+
+52. 在 _Layout.cshtml 透過 <link> 標籤引用 css 檔案
+
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/MvcMovie.styles.css" asp-append-version="true" />
+
+    問題：site.css 存放在專案的哪裡 (哪個資料夾底下)?
+    答案：
+
+
+    問題：MvcMovie.styles.css 存放在專案的哪裡 (哪個資料夾底下)?
+    答案：
+        1. 專案運行起來
+        2. 檢查網頁，找到 <link> 標籤
+        3. ...
+
+
+    問題：是否還記得 CSS 的權重?
+    答案：如果不記得，請閱讀先前自己在CSS課程的筆記
+        * !important > inline style > #id > .class > Element(標籤名稱)
+        * css檔案如果進行相同標籤的樣式設定，後面的會蓋掉前面的
+
+
+    問題：這兩個css檔案如果進行相同標籤的樣式設定，哪一個的權重較高?
+    答案：
+        (實驗步驟)
+
+        0. 在 \Views\Shared\_Layout.cshtml 檔案 寫下 <i>海賊王萬歲</i>
+            例如
+            <main role="main" class="pb-3">
+                <i>海賊王萬歲</i>
+                @RenderBody()
+                <i>航海王萬歲</i>
+            </main>
+
+        1. 在 \wwwroot\css\site.css            寫下 i { color:red; }
+
+        2. 在 \Views\Shared\_Layout.cshtml.css 寫下 i { color:green; }
+
+        3. 在 \Views\Shared\_Layout.cshtml 檔案
+            <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+            <link rel="stylesheet" href="~/MvcMovie.styles.css" asp-append-version="true" />
+            修改為
+            <link rel="stylesheet" href="~/MvcMovie.styles.css" asp-append-version="true" />
+            <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+
+        4. 得到實驗結果。
+
+
+    -----------------------------------------
+
+
+60. 為什麼我的 ASP.NET MVC 專案跑不起來/不會動/看不到網頁
+    * server 有沒有啟動
+    * css 樣式
+    * Views 資料夾底下有沒有 cshtml 檔案
+
+
+███████  2025/02/05  14:15
+
+35. 請嘗試處理下列問題/練習
+
+    * 透過下列問題理解 ASP.NET Core MVC 專案結構
+        -> 要開始製作大專題的你，需要知道檔案要如何存放
+
+
+    練習：導覽列目前有 Home 以及 Privacy 這兩個連結
+        請試著增加「Member」連結，點選後可以跳轉到 google首頁
+
+    答案：
+
+    -----------------------------------------
+
+
+    問題：為什麼在 _Layout.cshtml 加入 「Member」連結，
+        Index.cshtml 和 Privacy.cshtml 也會看的到 「Member」連結？
+
+    答案：_Layout.cshtml
+        公版 | 母版 | 主板 | 樣板 | 模板
+        相同的標籤/每一個頁面都需要的標籤 可以放在這裡
+
+
+
+    練習：請嘗試在網頁中增加 css 樣式
+        *  什麼樣式都可以，例如改變文字顏色或者背景顏色等等
+            確認你自己是否還記得 css 如何添加在網頁裡面
+
+
+    問題：目前專案預設開啟的是 Home頁面
+        要調整哪一個檔案，就可以將預設開啟的頁面改為 Privacy頁面
+    答案：
+
+
+    問題：呼叫函式變得好奇怪..
+    答案：具名和選擇性引數 (C# 程式設計手冊)
+        https://learn.microsoft.com/zh-tw/dotnet/csharp/programming-guide/classes-and-structs/named-and-optional-arguments
+    
+
+        * 建議：想要測試簡單的C#語法的時候，選擇 "主控台應用程式(.NET Framework)" 專案類型
+        
+
+
+
+███████  2025/02/05  14:05
+
+33. 專案開啟後，請試著進行底下操作，或回答問題
+
+    練習： 導覽列目前有 Home 以及 Privacy 這兩個連結
+        請嘗試點選 Home 以及 Privacy 確認網頁可以正常運作
+
+
+    問題：請觀察方案總管，目前看到的 Privacy頁面有可能會在哪個資料夾中？
+    答案：
+
+
+    練習： 請嘗試修改 Privacy頁面，加入一些文字內容
+    答案： 
+    
+
+
+
+███████  2025/02/05  13:30
+
+    TCP/UDP埠列表
+    https://zh.wikipedia.org/zh-tw/TCP/UDP%E7%AB%AF%E5%8F%A3%E5%88%97%E8%A1%A8
+
+
+    練習：透過官方文件觀察
+        ASP.NET Web Forms 的方案總管底下的檔案 與
+        ASP.NET Core MVC 的方案總管底下的檔案 的差異
+
+        ASP.NET Web Forms 
+        https://learn.microsoft.com/zh-tw/aspnet/web-forms/overview/getting-started/getting-started-with-aspnet-45-web-forms/create-the-project
+
+        * ASP.NET Web Forms 不需要跟著文件操作，查看圖片比較即可
+        * 未來查看技術文件的時候，需要識別，現在看的這一份文件是不是 "ASP.NET Core MVC"
+
+
+20. ASP.NET Core MVC 概觀
+    https://learn.microsoft.com/zh-tw/aspnet/core/mvc/overview?view=aspnetcore-8.0
+
+
+
+███████  2025/02/05  11:22
+
+30. 根據文件，創造第一個ASP.NET MVC專案
+
+    開始使用 ASP.NET Core MVC
+    https://learn.microsoft.com/zh-tw/aspnet/core/tutorials/first-mvc-app/start-mvc?view=aspnetcore-8.0&tabs=visual-studio
+
+
+
+
+███████  2025/02/05  10:05 ~ 10:22 ~ 11:11
+
+19. 討論：台灣高鐵的首頁輪播圖片區塊是否需要存入資料庫？
+    若「需要」，請提供資料表的欄位與設定
+    若「不需要」，請說明若輪播圖片需要更換時，應該要如何操作(改程式)
+
+
+    => 兩組覺得需要、兩組覺得不需要
+    => 每個人的設計理念或者實作方式不同沒關係，程式碼有出來就好。
+
+
+
+███████  2025/02/05  09:15 
+
+10. 關於 ASP.NET (ASP, Active Server Pages)
+    . ASP.NET 概觀：https://learn.microsoft.com/zh-tw/aspnet/overview
+    . 維基百科(.NET Framework)：https://zh.wikipedia.org/zh-tw/.NET%E6%A1%86%E6%9E%B6
+    . 維基百科(.NET )：https://zh.wikipedia.org/zh-tw/.NET
+    . 在 ASP.NET 4.x 和 ASP.NET Core 之間進行選擇：https://docs.microsoft.com/zh-tw/aspnet/core/fundamentals/choose-aspnet-framework?view=aspnetcore-6.0
+
+
+
+15. 對「其他」伺服器請求服務
+    第一銀行個人網銀：  https://ibank.firstbank.com.tw/NetBank/index103.html
+    第一銀行學雜費：https://eschool.firstbank.com.tw/member/index.aspx
+    丹迪訂房：  https://booking.taipeiinngroup.com/nv/reservation/reservation.php?hid=105
+    聯合新聞：  https://udn.com/news/cate/2/6649
+    台灣高鐵：  https://www.thsrc.com.tw/
+
